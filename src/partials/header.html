@@ -1,104 +1,19 @@
 <header class="header">
-  <div class="container header-container">
-    <a href="./" class="logo">
-      <svg class="logo-icon" width="120" height="40">
-        <use href="{=$icon-path}"></use>
-      </svg>
-    </a>
-
+  <div class="container">
     <nav class="nav">
+      <a class="nav-logo" href="./index.html" aria-label="Site logo">
+        <svg class="nav-logo-icon" width="100" height="30">
+          <use href="{=$icon-path}"></use>
+        </svg>
+      </a>
       <ul class="nav-list">
         <li class="nav-item">
-          <a href="#about" class="nav-link" data-translate="about">
-            <span class="uk">Про нас</span>
-            <span class="ru">О нас</span>
-          </a>
+          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
         </li>
         <li class="nav-item">
-          <a href="#products" class="nav-link" data-translate="products">
-            <span class="uk">Вироби</span>
-            <span class="ru">Изделия</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#stones" class="nav-link" data-translate="stones">
-            <span class="uk">Камені</span>
-            <span class="ru">Камни</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#gallery" class="nav-link" data-translate="gallery">
-            <span class="uk">Галерея</span>
-            <span class="ru">Галерея</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="#contacts" class="nav-link" data-translate="contacts">
-            <span class="uk">Контакти</span>
-            <span class="ru">Контакты</span>
-          </a>
+          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
         </li>
       </ul>
     </nav>
-
-    <div class="language-switcher">
-      <button type="button" class="lang-btn" data-language="uk">UA</button>
-      <button type="button" class="lang-btn" data-language="ru">RU</button>
-    </div>
-
-    <button type="button" class="burger-menu-btn" aria-label="Відкрити меню">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </div>
-
-  <!-- Мобільне меню -->
-  <div class="mobile-menu">
-    <div class="container mobile-menu-container">
-      <button type="button" class="mobile-menu-close" aria-label="Закрити меню">
-        <svg width="24" height="24" aria-label="Іконка закриття меню">
-          <use href="./img/sprite.svg#close"></use>
-        </svg>
-      </button>
-
-      <ul class="mobile-menu-list">
-        <li class="mobile-menu-item">
-          <a href="#about" class="mobile-menu-link" data-translate="about">
-            <span class="uk">Про нас</span>
-            <span class="ru">О нас</span>
-          </a>
-        </li>
-        <li class="mobile-menu-item">
-          <a href="#products" class="mobile-menu-link" data-translate="products">
-            <span class="uk">Вироби</span>
-            <span class="ru">Изделия</span>
-          </a>
-        </li>
-        <li class="mobile-menu-item">
-          <a href="#stones" class="mobile-menu-link" data-translate="stones">
-            <span class="uk">Камені</span>
-            <span class="ru">Камни</span>
-          </a>
-        </li>
-        <li class="mobile-menu-item">
-          <a href="#gallery" class="mobile-menu-link" data-translate="gallery">
-            <span class="uk">Галерея</span>
-            <span class="ru">Галерея</span>
-          </a>
-        </li>
-        <li class="mobile-menu-item">
-          <a href="#contacts" class="mobile-menu-link" data-translate="contacts">
-            <span class="uk">Контакти</span>
-            <span class="ru">Контакты</span>
-          </a>
-        </li>
-      </ul>
-
-      <div class="mobile-language-switcher">
-        <button type="button" class="mobile-lang-btn" data-language="uk">UA</button>
-        <button type="button" class="mobile-lang-btn" data-language="ru">RU</button>
-      </div>
-    </div>
   </div>
 </header>

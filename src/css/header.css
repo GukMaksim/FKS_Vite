@@ -1,62 +1,31 @@
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
 }
-
-.header-container {
+.nav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
 }
-
-/* Логотип */
-.logo {
-  flex-shrink: 0;
+.nav-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.logo-icon {
-  display: block;
-  height: auto;
-}
-
-/* Навігація */
 .nav-list {
   display: flex;
-  gap: 2rem;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 40px;
 }
-
 .nav-link {
   position: relative;
-  font-size: 1rem;
+  display: block;
   font-weight: 500;
-  color: #333;
-  transition: color 0.3s ease;
+  letter-spacing: 0.02em;
+  transition: 200ms ease-in;
 }
-
-.nav-link:hover {
-  color: #000;
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #000;
-  transition: width 0.3s ease;
-}
-
-.nav-link:hover::after {
-  width: 100%;
+.nav-link:hover,
+.nav-link:focus {
+  color: #747bff;
 }
 .nav-link::after {
   content: '';
