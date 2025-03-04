@@ -1,0 +1,45 @@
+/* Стилі для кастомного скролу */
+
+/* Основний контейнер для скролу */
+.scroll-content {
+  will-change: transform;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* Стилі для скролбару (приховуємо стандартний) */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Стилі для мобільних пристроїв */
+@media screen and (max-width: 768px) {
+  .scroll-content {
+    transform: none !important;
+    position: static !important;
+  }
+  
+  body {
+    position: static !important;
+    height: auto !important;
+    overflow: auto !important;
+  }
+}
+
+/* Анімація для плавного скролу */
+.scroll-content {
+  transition: transform 0.1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Стилі для активного стану скролу */
+.smooth-scroll-active {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
