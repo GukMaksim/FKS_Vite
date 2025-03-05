@@ -6,7 +6,7 @@
 
 .footer-container {
   display: grid;
-  grid-template-columns: 300px repeat(3, 1fr);
+  grid-template-columns: 300px repeat(2, 1fr);
   gap: 80px;
   margin-bottom: 40px;
 }
@@ -33,6 +33,10 @@
   margin-bottom: 24px;
   font-size: 18px;
   font-weight: 600;
+}
+
+.footer-social {
+  margin-top: 24px;
 }
 
 .footer-nav-list,
