@@ -6,7 +6,8 @@
 
 .footer-container {
   display: grid;
-  gap: 40px;
+  grid-template-columns: 300px repeat(3, 1fr);
+  gap: 80px;
   margin-bottom: 40px;
 }
 
@@ -103,16 +104,19 @@
   color: rgba(255, 255, 255, 0.6);
 }
 
-@media screen and (min-width: 768px) {
+/* Tablet styles */
+@media screen and (max-width: 1199px) {
   .footer-container {
     grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
   }
 }
 
-@media screen and (min-width: 1200px) {
+/* Mobile styles */
+@media screen and (max-width: 767px) {
   .footer-container {
-    grid-template-columns: 300px repeat(3, 1fr);
-    gap: 80px;
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 }
 
