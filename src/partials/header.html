@@ -1,19 +1,56 @@
 <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
+  <div class="container header-container">
+    <a href="./" class="logo">
+      <img
+        src="./img/logo.png"
+        alt="ФКС логотип"
+        class="logo-icon"
+        width="40"
+        height="40"
+      />
+      <span class="logo-text">ФКС</span>
+    </a>
+
+    <div class="menu-container" id="mobile-menu">
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="./" class="nav-link current">Головна</a>
+          </li>
+          <li class="nav-item">
+            <a href="./catalog.html" class="nav-link">Каталог</a>
+          </li>
+          <li class="nav-item">
+            <a href="./stones.html" class="nav-link">Камінь</a>
+          </li>
+          <li class="nav-item">
+            <a href="./about.html" class="nav-link">Про нас</a>
+          </li>
+          <li class="nav-item">
+            <a href="./contacts.html" class="nav-link">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <ul class="header-contacts">
+      <li class="header-contacts-item">
+        <a href="tel:+380672660909" class="header-contacts-link"
+          >+38 (067) 266-09-09</a
+        >
+      </li>
+      <li class="header-contacts-item">
+        <a href="mailto:fks.marble@gmail.com" class="header-contacts-link">
+          fks.marble@gmail.com
+        </a>
+      </li>
+    </ul>
+    <button
+      type="button"
+      class="menu-button"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span class="menu-button-line"></span>
+    </button>
   </div>
 </header>
