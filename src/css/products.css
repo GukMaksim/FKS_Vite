@@ -5,7 +5,7 @@
 
 .section-title {
   margin-bottom: 16px;
-  font-size: 32px;
+  font-size: 48px;
   font-weight: 700;
   text-align: center;
   color: var(--primary-color);
@@ -14,7 +14,7 @@
 .section-description {
   max-width: 700px;
   margin: 0 auto 48px;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   text-align: center;
   color: var(--secondary-color);
@@ -22,7 +22,7 @@
 
 .products-list {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
   margin-bottom: 48px;
 }
@@ -68,13 +68,13 @@
 
 .products-title {
   margin-bottom: 12px;
-  font-size: 20px;
+  font-size: 32px;
   font-weight: 600;
   color: var(--primary-color);
 }
 
 .products-text {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.5;
   color: var(--secondary-color);
 }
@@ -84,26 +84,38 @@
   justify-content: center;
 }
 
-@media screen and (min-width: 768px) {
-  .products-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
+@media screen and (max-width: 1199px) {
   .section-title {
-    font-size: 36px;
+    font-size: 40px;
   }
-  
-  .section-description {
-    font-size: 18px;
+  .products-title {
+    font-size: 28px;
+  }
+  .products-text {
+    font-size: 16px;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 767px) {
   .products-list {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
-  
   .section-title {
-    font-size: 42px;
+    font-size: 32px;
+  }
+  .section-description {
+    font-size: 16px;
+  }
+  .products-title {
+    font-size: 24px;
+  }
+  .products-text {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .products-list {
+    grid-template-columns: 1fr;
   }
 }
