@@ -77,19 +77,41 @@ function renderProductCatalog(category = null) {
     const productCategory = productCategories[category];
     content = `
       <h2>${productCategory.title}</h2>
-      <ul class="product-list">
-        ${productCategory.items.map(item => `<li class="product-item">${item}</li>`).join('')}
-      </ul>
+      <div class="product-category-details">
+        <div class="product-category-info">
+          <p class="product-category-description">${productCategory.description}</p>
+        </div>
+        <div class="product-items-grid">
+          ${productCategory.items.map(item => `
+            <div class="product-item-card">
+              <div class="product-item-image">
+                <img src="${item.image}" alt="${item.title}" loading="lazy">
+              </div>
+              <div class="product-item-info">
+                <h3>${item.title}</h3>
+                <p>${item.description}</p>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
     `;
   } else {
     // Відображення всіх категорій виробів
     content = `
-      <h2>ВИРОБИ З КАМЕНЮ</h2>
-      <div class="product-categories">
+      <h2 class="section-title">ВИРОБИ З КАМЕНЮ</h2>
+      <p class="section-description">Широкий асортимент виробів з натурального каменю найвищої якості</p>
+      <div class="product-categories-grid">
         ${Object.entries(productCategories).map(([key, value]) => `
-          <div class="product-category">
-            <h3>${value.title}</h3>
-            <a href="./product-categories.html?category=${key}" class="category-link">Переглянути</a>
+          <div class="product-category-card">
+            <div class="product-category-image">
+              <img src="${value.image}" alt="${value.title}" loading="lazy">
+            </div>
+            <div class="product-category-content">
+              <h3>${value.title}</h3>
+              <p>${value.description}</p>
+              <a href="./product-categories.html?category=${key}" class="category-link">Переглянути</a>
+            </div>
           </div>
         `).join('')}
       </div>
