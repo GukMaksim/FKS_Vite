@@ -3,7 +3,7 @@ export const stoneTypes = {
   'granite-ukraine': {
     id: 'type1',
     title: 'Граніт України',
-    image: '../img/products/stone/granite-ukraine.jpg',
+    image: './img/products/stone/granite-ukraine.jpg',
     description:
       'Граніт України - це натуральний камінь з України, який має унікальну природну форму та характеристики.',
     items: [
