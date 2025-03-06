@@ -41,7 +41,7 @@ export default defineConfig(({ command }) => {
       injectHTML(),
       FullReload(['./src/**/**.html']),
       SortCss({
-        sort: 'mobile-first',
+        sort: 'desktop-first',
       }),
     ],
   };
