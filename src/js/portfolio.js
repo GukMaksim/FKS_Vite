@@ -79,9 +79,33 @@ function initSlider(category, items) {
 
   // Initialize Swiper
   new Swiper(sliderSelector, {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 30,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+    },
     centeredSlides: true,
+    grabCursor: true,
+    lazy: true,
+    effect: "coverflow",
+    coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
     loop: true,
     pagination: {
       el: `${sliderSelector} .swiper-pagination`,

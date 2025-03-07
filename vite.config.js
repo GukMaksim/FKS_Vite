@@ -4,6 +4,9 @@ import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 import SortCss from 'postcss-sort-media-queries';
 
+// Add imagemin plugin for Vite
+import imagemin from 'vite-plugin-imagemin'
+
 export default defineConfig(({ command }) => {
   return {
     define: {
@@ -42,6 +45,33 @@ export default defineConfig(({ command }) => {
       FullReload(['./src/**/**.html']),
       SortCss({
         sort: 'desktop-first',
+      }),
+      imagemin({
+        gifsicle: {
+          optimizationLevel: 7,
+          interlaced: false,
+        },
+        optipng: {
+          optimizationLevel: 7,
+        },
+        mozjpeg: {
+          quality: 80,
+        },
+        pngquant: {
+          quality: [0.8, 0.9],
+          speed: 4,
+        },
+        svgo: {
+          plugins: [
+            {
+              name: 'removeViewBox',
+            },
+            {
+              name: 'removeEmptyAttrs',
+              active: false,
+            },
+          ],
+        },
       }),
     ],
   };
