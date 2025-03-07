@@ -399,7 +399,13 @@ export const productCategories = {
     image: new URL('../img/products/categories/bathroom.jpg', import.meta.url)
       .href,
     description: 'Ванна кімната з натурального каменю',
-    items: [{}],
+    items: [{
+      id: 'category6-1',
+      title: 'Ванна кімната',
+      image: new URL('../img/products/categories/bathroom.jpg', import.meta.url)
+      .href,
+      description: 'Ванна кімната',
+    }],
   },
   tiles: {
     id: 'category7',
