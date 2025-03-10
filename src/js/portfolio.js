@@ -1,6 +1,6 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
-import { productCategories } from './catalog-data';
+import { productCategories } from './product-categories.js';
 
 // Function to initialize sliders
 function initPortfolioSliders() {

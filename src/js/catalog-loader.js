@@ -8,7 +8,8 @@ function getUrlParams() {
 }
 
 // Імпортуємо дані з окремого файлу
-import { stoneTypes, productCategories } from './catalog-data.js';
+import { stoneTypes } from './stone-types.js';
+import { productCategories } from './product-categories.js';
 
 // Функція для відображення каталогу каменю
 function renderStoneCatalog(type = null) {
