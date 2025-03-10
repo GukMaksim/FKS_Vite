@@ -1,6 +1,7 @@
 import { initMobileMenu } from './js/mobile-menu.js';
 import { setActivePage } from './js/active-page.js';
-import { initCatalogs } from './js/catalog-loader.js';
+import { initStones } from './js/loader-stones.js';
+import { initProducts } from './js/loader-products.js';
 import { generateBreadcrumbs } from './js/breadcrumbs.js';
 import './css/breadcrumbs.css';
 
@@ -12,7 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
   setActivePage();
   
   // Ініціалізація каталогів
-  initCatalogs();
+  initStones();
+  initProducts();
   
   generateBreadcrumbs();
 });
