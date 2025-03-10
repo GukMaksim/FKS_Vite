@@ -8,8 +8,8 @@ function getUrlParams() {
 }
 
 // Імпортуємо дані з окремого файлу
-import { stoneTypes } from './stone-types.js';
-import { productCategories } from './product-categories.js';
+import { stoneTypes } from './data-stones.js';
+import { productCategories } from './data-products.js';
 
 // Функція для відображення каталогу каменю
 function renderStoneCatalog(type = null) {
@@ -111,7 +111,7 @@ function renderProductCatalog(category = null) {
             <div class="product-category-content">
               <h3>${value.title}</h3>
               <p>${value.description}</p>
-              <a href="./product-categories.html?category=${key}" class="category-link">Переглянути</a>
+              <a href="./products.html?category=${key}" class="category-link">Переглянути</a>
             </div>
           </div>
         `).join('')}
@@ -217,7 +217,7 @@ function renderProductCategoryDetails(categoryId) {
     content = `
       <h2>Категорія не знайдена</h2>
       <p>На жаль, інформація про вказану категорію відсутня.</p>
-      <a href="./product-categories.html" class="back-link">Повернутися до каталогу</a>
+      <a href="./products.html" class="back-link">Повернутися до каталогу</a>
     `;
   }
   
@@ -233,7 +233,7 @@ export function initCatalogs() {
     renderStoneCatalog(type);
   } else if (path.includes('stone.html')) {
     renderStoneDetails(type);
-  } else if (path.includes('product-categories.html')) {
+  } else if (path.includes('products.html')) {
     renderProductCatalog(category);
   } else if (path.includes('product-category.html')) {
     renderProductCategoryDetails(category);

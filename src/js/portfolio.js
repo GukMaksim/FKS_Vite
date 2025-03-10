@@ -1,6 +1,6 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
-import { productCategories } from './product-categories.js';
+import { productCategories } from './data-products.js';
 
 // Function to initialize sliders
 function initPortfolioSliders() {
@@ -129,7 +129,7 @@ function initSlider(category, items) {
       const linkButton = document.createElement('a');
       linkButton.className = 'category-link-button';
       linkButton.textContent = 'Перейти';
-      linkButton.href = `./product-categories.html?category=${category}`;
+      linkButton.href = `./products.html?category=${category}`;
       
       // Create a container for the button to center it
       const buttonContainer = document.createElement('div');

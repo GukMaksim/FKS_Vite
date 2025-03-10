@@ -19,7 +19,7 @@ export function generateBreadcrumbs() {
 
   // Define page mappings for breadcrumb labels
   const pageLabels = {
-    'product-categories.html': 'Вироби з каменю',
+    'products.html': 'Вироби з каменю',
     'stones.html': 'Каталог каменю',
     'portfolio.html': 'Портфоліо',
     'contacts.html': 'Контакти',
@@ -36,7 +36,7 @@ export function generateBreadcrumbs() {
     listItem.className = 'breadcrumbs-item';
     
     // For pages without query parameters or special cases
-    if (!search || (pageName !== 'stones.html' && pageName !== 'product-categories.html')) {
+    if (!search || (pageName !== 'stones.html' && pageName !== 'products.html')) {
       const span = document.createElement('span');
       span.className = 'breadcrumbs-current';
       span.textContent = pageLabels[pageName];
@@ -64,12 +64,12 @@ function addSpecificBreadcrumb(breadcrumbsList, pageName, search) {
   let label = '';
   let param = '';
   
-  if (pageName === 'product-categories.html') {
+  if (pageName === 'products.html') {
     // Add intermediate level for product catalog
     const catalogListItem = document.createElement('li');
     catalogListItem.className = 'breadcrumbs-item';
     const catalogLink = document.createElement('a');
-    catalogLink.href = './product-categories.html';
+    catalogLink.href = './products.html';
     catalogLink.className = 'breadcrumbs-link';
     catalogLink.textContent = 'Вироби з каменю';
     catalogListItem.appendChild(catalogLink);

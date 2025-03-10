@@ -17,13 +17,13 @@ export const stoneTypes = {
         ).href,
         description:
           'Граніт України - це натуральний камінь з України, який має унікальну природну форму та характеристики.',
-/*         characteristics: {
+        characteristics: {
           origin: 'Україна',
           color: 'Коричневий',
           thickness: '10-20 мм',
           format: 'Квадратний',
           price: 'від 1200 грн/м²',
-        }, */
+        },
       },
       {
         id: 'granite-ukraine-2',
@@ -77,7 +77,7 @@ export const stoneTypes = {
           .href,
         description:
           'Граніт - це натуральний камінь, який має унікальну природну форму та характеристики.',
-        },
+      },
     ],
   },
   marble: {
