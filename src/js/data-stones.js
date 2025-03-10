@@ -9,42 +9,56 @@ export const stoneTypes = {
       'Граніт України - це натуральний камінь з України, який має унікальну природну форму та характеристики.',
     items: [
       {
-        id: 'granite-ukraine-1',
-        title: 'Граніт України 1',
+        id: 'granite-ukraine-labradoryt',
+        title: 'Граніт "Лабрадорит"',
         image: new URL(
-          '../img/products/stone/granite-ukraine.jpg',
+          '../img/products/stone/granite-ukraine-labradoryt.jpg',
           import.meta.url
         ).href,
         description:
-          'Граніт України - це натуральний камінь з України, який має унікальну природну форму та характеристики.',
+          'Це глибокий чорний граніт із характерними синіми кристалами, що створюють ефект глибини. Використовується для фасадів, пам’ятників, інтер’єрних елементів.',
         characteristics: {
           origin: 'Україна',
-          color: 'Коричневий',
-          thickness: '10-20 мм',
+          color: 'Чорний з переливами синього',
+          thickness: '20-50 мм',
           format: 'Квадратний',
           price: 'від 1200 грн/м²',
         },
       },
       {
-        id: 'granite-ukraine-2',
-        title: 'Граніт України 2',
+        id: 'granite-ukraine-kapustyanskiy',
+        title: 'Граніт "Капустянський"',
         image: new URL(
-          '../img/products/stone/granite-ukraine.jpg',
+          '../img/products/stone/granite-ukraine-kapustyanskiy.jpg',
           import.meta.url
         ).href,
         description:
-          'Граніт України - це натуральний камінь з України, який має унікальну природну форму та характеристики.',
-      },
+          'Один із найміцніших і довговічних українських гранітів, має насичений червоний відтінок. Використовується для облицювання будівель, пам’ятників, плитки, сходів.',
+          characteristics: {
+            origin: 'Україна',
+            color: 'Червоний з чорними і сірими вкрапленнями',
+            thickness: '20-50 мм',
+            format: 'Квадратний',
+            price: 'від 1200 грн/м²',
+          },
+        },
       {
-        id: 'granite-ukraine-3',
-        title: 'Граніт України 3',
+        id: 'granite-ukraine-sofiivksy',
+        title: 'Граніт "Софіївський"',
         image: new URL(
-          '../img/products/stone/granite-ukraine.jpg',
+          '../img/products/stone/granite-ukraine-sofiivksy.jpg',
           import.meta.url
         ).href,
         description:
-          'Граніт України - це натуральний камінь з України, який має унікальну природну форму та характеристики.',
-      },
+          'Класичний граніт із рівномірною текстурою, чудово підходить для мощення, облицювання фасадів та внутрішніх приміщень. Дуже міцний і довговічний.',
+          characteristics: {
+            origin: 'Україна',
+            color: 'Світло-сірий із чорними вкрапленнями',
+            thickness: '20-50 мм',
+            format: 'Квадратний',
+            price: 'від 1200 грн/м²',
+          },
+        },
     ],
   },
   granite: {
@@ -55,28 +69,50 @@ export const stoneTypes = {
       'Граніт - це натуральний камінь, який має унікальну природну форму та характеристики.',
     items: [
       {
-        id: 'granite-1',
-        title: 'Граніт 1',
-        image: new URL('../img/products/stone/granite-1.jpg', import.meta.url)
+        id: 'granite-baltic-brown',
+        title: 'Baltic Brown',
+        image: new URL('../img/products/stone/granite-baltic-brown.jpg', import.meta.url)
           .href,
         description:
-          'Граніт - це натуральний камінь, який має унікальну природну форму та характеристики.',
+          'Цей граніт має теплий коричневий відтінок з характерними круглими візерунками, що надають йому унікального вигляду. Використовується для стільниць, підлогових покриттів та облицювання.',
+          characteristics: {
+            origin: 'Фінляндія',
+            color: 'Коричневий з чорними та сірими вкрапленнями',
+            thickness: '20-30 мм',
+            format: 'Квадратний',
+            price: 'від 1200 грн/м²',
+          },
+        },
+      {
+        id: 'granite-verde-ubatuba',
+        title: 'Verde Ubatuba',
+        image: new URL('../img/products/stone/granite-verde-ubatuba.jpeg', import.meta.url)
+          .href,
+        description:
+          'Цей граніт відомий своїм насиченим темно-зеленим кольором з дрібними золотистими вкрапленнями, що додають йому глибини. Часто використовується для стільниць, підвіконь та облицювання стін.',
+          characteristics: {
+            origin: 'Бразилія',
+            color: 'Темно-зелений з дрібними золотистими вкрапленнями',
+            thickness: '20-30 мм',
+            format: 'Квадратний',
+            price: 'від 1200 грн/м²',
+          },
       },
       {
-        id: 'granite-2',
-        title: 'Граніт 2',
-        image: new URL('../img/products/stone/granite-2.jpg', import.meta.url)
+        id: 'granite-black-galaxy',
+        title: 'Black Galaxy',
+        image: new URL('../img/products/stone/granite-black-galaxy.jpg', import.meta.url)
           .href,
         description:
-          'Граніт - це натуральний камінь, який має унікальну природну форму та характеристики.',
-      },
-      {
-        id: 'granite-3',
-        title: 'Граніт 3',
-        image: new URL('../img/products/stone/granite-3.jpg', import.meta.url)
-          .href,
-        description:
-          'Граніт - це натуральний камінь, який має унікальну природну форму та характеристики.',
+          'Цей граніт має глибокий чорний фон з дрібними золотистими та сріблястими вкрапленнями, що нагадують зоряне небо. Використовується для стільниць, підлог та декоративних елементів.',
+          characteristics: {
+            origin: 'Індія',
+            color: 'Чорний з золотистими та сріблястими вкрапленнями',
+            thickness: '20-30 мм',
+            format: 'Квадратний',
+            price: 'від 1200 грн/м²',
+          },
+        
       },
     ],
   },

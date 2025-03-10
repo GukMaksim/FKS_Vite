@@ -23,8 +23,6 @@ export function generateBreadcrumbs() {
     'stones.html': 'Каталог каменю',
     'portfolio.html': 'Портфоліо',
     'contacts.html': 'Контакти',
-    'stone.html': 'Деталі каменю',
-    'product-category.html': 'Категорія виробів'
   };
 
   // Extract page name from path

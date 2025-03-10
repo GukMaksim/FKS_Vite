@@ -4,21 +4,17 @@ import { productCategories } from './data-products.js';
 
 // Function to initialize sliders
 function initPortfolioSliders() {
-  // Create placeholder images for development
-  createPlaceholderImages();
+  // Only create placeholders in development mode
+  if (process.env.NODE_ENV === 'development') {
+    createPlaceholderImages();
+  }
 
-  // Initialize each slider
-  initSlider('countertops', productCategories.countertops.items);
-  initSlider('windowsills', productCategories.windowsills.items);
-  initSlider('stairs', productCategories.stairs.items);
-  initSlider('fireplaces', productCategories.fireplaces.items);
-  initSlider('floors', productCategories.floors.items);
-  initSlider('bathrooms', productCategories.bathrooms.items);
-  initSlider('tiles', productCategories.tiles.items);
-  initSlider('monuments', productCategories.monuments.items);
-  initSlider('paving', productCategories.paving.items);
-  initSlider('slabs', productCategories.slabs.items);
-  initSlider('rosettes', productCategories.rosettes.items);
+  // Get all product categories and initialize sliders dynamically
+  Object.entries(productCategories).forEach(([key, category]) => {
+    if (category.items && category.items.length > 0) {
+      initSlider(key, category.items);
+    }
+  });
 }
 
 // Function to create and show lightbox
