@@ -58,15 +58,6 @@ function renderStoneCatalog(type = null, item = null) {
       const stoneType = stoneTypes[type];
       content = `
         <h2 class="stone-title">${stoneType.title}</h2>
-        <div class="stone-type-details">
-          <div class="stone-type-image">
-            <img src="${stoneType.image}" alt="${stoneType.title}" />
-          </div>
-          <div class="stone-type-info">
-            <p class="stone-type-description">${stoneType.description}</p>
-          </div>
-        </div>
-        <h3>Варіанти ${stoneType.title}</h3>
         <div class="stone-variants-grid">
           ${stoneType.items.map(item => `
             <div class="stone-variant-card">
@@ -76,7 +67,6 @@ function renderStoneCatalog(type = null, item = null) {
                 </div>
                 <div class="stone-variant-info">
                   <h4>${item.title}</h4>
-                  <p>${item.description}</p>
                 </div>
               </a>
             </div>
@@ -107,11 +97,44 @@ function renderStoneCatalog(type = null, item = null) {
     container.innerHTML = content;
   }
 
+  // Функція для відображення каталогу каменю на головній сторінці
+function renderMainPageStoneCatalog() {
+    const container = document.querySelector('.stone-types-grid');
+    if (!container) {
+        console.error('Stone types grid container not found');
+        return;
+    }
+
+    let content = '';
+    
+    // Відображаємо перші 6 типів каменю (або всі, якщо їх менше 6)
+    const stoneEntries = Object.entries(stoneTypes).slice(0, 6);
+    
+    content = stoneEntries.map(([key, value]) => `
+        <div class="stone-type-card">
+            <div class="stone-type-image">
+                <img src="${value.image}" alt="${value.title}" loading="lazy" />
+            </div>
+            <div class="stone-type-info">
+                <h3>${value.title}</h3>
+                <p>${value.description}</p>
+                <a href="./stones.html?type=${key}" class="btn btn-secondary">Переглянути</a>
+            </div>
+        </div>
+    `).join('');
+    
+    container.innerHTML = content;
+}
+
   // Функція ініціалізації каталогів
 export function initStones() {
     const { type, item } = getUrlParams();
     const path = window.location.pathname;
+    
     if (path.includes('/stones.html')) {
       renderStoneCatalog(type, item);
+    } else if (path.includes('/index.html') || path === '/' || path.endsWith('/')) {
+      // Якщо це головна сторінка, відображаємо спрощений каталог
+      renderMainPageStoneCatalog();
     }
   }

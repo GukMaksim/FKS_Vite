@@ -1,6 +1,6 @@
 .products {
   padding: 80px 0;
-  background-color: #ffffff;
+  background-color: var(--light-color);
 }
 
 .section-title {
@@ -28,6 +28,7 @@
 }
 
 .products-item {
+  background: #fff;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
