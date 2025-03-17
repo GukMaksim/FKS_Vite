@@ -11,12 +11,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/FKS_Vite/assets/main-VjzjgAYL.js"></script>
-    <link rel="stylesheet" crossorigin href="/FKS_Vite/assets/main-E3A5A8IA.css">
+    <script type="module" crossorigin src="/FKS_Vite/assets/main-B7_sSYkC.js"></script>
+    <link rel="stylesheet" crossorigin href="/FKS_Vite/assets/main-pRQ1rV0L.css">
   </head>
   <body>
     <header class="header">
-  <div class="container header-container">
+  <!-- Top header section -->
+  <div class="container header-top">
     <a href="./" class="logo">
       <img
         src="/FKS_Vite/assets/logo-DVKV3uQ3.png"
@@ -28,71 +29,108 @@
       <span class="logo-text">ФКС</span>
     </a>
 
-    <div class="menu-container" id="mobile-menu">
-      <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a href="./" class="nav-link current">Головна</a>
-          </li>
-          <li class="nav-item has-submenu">
-            <a href="./products.html" class="nav-link">Вироби з каменю</a>
-            <ul class="submenu">
-              <li class="submenu-item"><a href="./products.html?category=countertops" class="submenu-link">Стільниці</a></li>
-              <li class="submenu-item"><a href="./products.html?category=windowsills" class="submenu-link">Підвіконня</a></li>
-              <li class="submenu-item"><a href="./products.html?category=stairs" class="submenu-link">Сходи</a></li>
-              <li class="submenu-item"><a href="./products.html?category=fireplaces" class="submenu-link">Каміни</a></li>
-              <li class="submenu-item"><a href="./products.html?category=floors" class="submenu-link">Підлоги</a></li>
-              <li class="submenu-item"><a href="./products.html?category=bathrooms" class="submenu-link">Ванна кімната</a></li>
-              <li class="submenu-item"><a href="./products.html?category=tiles" class="submenu-link">Плитка</a></li>
-              <li class="submenu-item"><a href="./products.html?category=monuments" class="submenu-link">Пам'ятники</a></li>
-              <li class="submenu-item"><a href="./products.html?category=paving" class="submenu-link">Бруківка</a></li>
-              <li class="submenu-item"><a href="./products.html?category=slabs" class="submenu-link">Слеби</a></li>
-              <li class="submenu-item"><a href="./products.html?category=rosettes" class="submenu-link">Розетки пано</a></li>
-              <li class="submenu-item"><a href="./products.html?category=entrances" class="submenu-link">Вхідні групи</a></li>
-              <li class="submenu-item"><a href="./products.html?category=church" class="submenu-link">Церковні роботи</a></li>
-            </ul>
-          </li>
-          <li class="nav-item has-submenu">
-            <a href="./stones.html" class="nav-link">Каталог каменю</a>
-            <ul class="submenu">
-              <li class="submenu-item"><a href="./stones.html?type=granite-ukraine" class="submenu-link">Граніт України</a></li>
-              <li class="submenu-item"><a href="./stones.html?type=granite" class="submenu-link">Граніт</a></li>
-              <li class="submenu-item"><a href="./stones.html?type=marble" class="submenu-link">Мармур</a></li>
-              <li class="submenu-item"><a href="./stones.html?type=quartzite" class="submenu-link">Кварцит</a></li>
-              <li class="submenu-item"><a href="./stones.html?type=travertine" class="submenu-link">Травертин</a></li>
-              <li class="submenu-item"><a href="./stones.html?type=onyx" class="submenu-link">Онікс</a></li>
-              <li class="submenu-item"><a href="./stones.html?type=sandstone" class="submenu-link">Піщаник</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="./portfolio.html" class="nav-link">Портфоліо</a>
-          </li>
-          <li class="nav-item">
-            <a href="./contacts.html" class="nav-link">Контакти</a>
-          </li>
-        </ul>
-      </nav>
+    <div class="search-container">
+      <form class="search-form">
+        <input type="text" class="search-input" placeholder="Пошук по сайту..." />
+        <button type="submit" class="search-button">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24">
+            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+          </svg>
+        </button>
+      </form>
     </div>
-    <ul class="header-contacts">
-      <li class="header-contacts-item">
-        <a href="tel:+380672660909" class="header-contacts-link"
-          ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAACC0lEQVR4nO2WTUhUURiGn/Evf6aESnAR6lBSKVHtBkKXCa5aiAtduVGiZbRIN+1cirQKF4JRJLgoSqjUIFrook0juDGKtNAKBDH6m5qJA+/A5+WOFXPPMAtfuIv7nXO+973n+7uwjxJGHLgN7ABLwNliktcAz4CsebaA88UgrwaeiPQDcAZ4pPdN4JRP8nJDtgGclP0A8NiIOuFLwA2RfATaQsIyr/V3wDEfAj6LIJlnvQ54rj33oyaPAd/kvH6PfRe0Zx0PmJPzy3nWXUJ+0p5xHwJ65fyVbiQf+QOgyoeAKl2tI+kx9jJlv7M/9EWew5CIVlSWOUzJPolnVAKvRXbF2E8Dv4FfQLtvEZckwM2BhLHflP2lmpNX3BHZgknIg8Ab2aeVG95wRO3YkY0EQrEl+wxQG3LWlfGiRDYVIqJbcc8AfcbeYUQsA+fM2mhgir4FWgoRMSJH34FOYz8OpLTmEvMWMKb3NDAAvIhCRAyYMP8EycCAcl/803xx2vSQeFQiyoF7cvRFobFwY/uubsk2sDARzYWImDBXfj2kCg7lOWtFuGlKIeEYVmJm5bT1H88mFKofIXPmv9EFvJeIr8C1v8yHBpOws0SEemV+Ro7XgEGgYg9yN18aiRgX1QtyVeA65VXgqP4dc+QpifGCMqAfWA00oWwxyIOV4gbZU+XGtirn8K5d+ygl/AE3xpvuGHiprQAAAABJRU5ErkJggg==" alt="Телефон" class="contacts-icon" width="24" height="24"></a
-        >
-      </li>
-      <li class="header-contacts-item">
-        <a href="mailto:fks.marble@gmail.com" class="header-contacts-link">
-          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA7ElEQVR4nO3UPUpDQRQF4I9gp4h1/MEtqGQPBu3sLd2CqxAFCxdhQBFchegWlJdE6xSpDESEEYbnjC+8RLF4B25zf86ZOXcYGvwnHGCA6ZzRRzcl0F8A+TREkRL4Kq7O4cJyxPMNo1AY4qgG+SFeAsc41dDGdXSCO2zNQLyOXjR3j+2qZT9HJznFUqKvhZPo5q84/on4CmuRl2d4D8OP2It6d/EQahNcRrtbwXlK4LP5rZTbKRFdhOFJyD2hU5opckvObb9VsqLKuuwryhYCNnCDW2zKo7bArGgE6lv0659dd0EiBfarL9rgr/ABCyOWRsKdmrwAAAAASUVORK5CYII=" alt="Email" class="contacts-icon" width="24" height="24">
+
+    <div class="header-info">
+      <div class="header-contact-item">
+        <a href="tel:+380672660909" class="header-contact-link">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAACC0lEQVR4nO2WTUhUURiGn/Evf6aESnAR6lBSKVHtBkKXCa5aiAtduVGiZbRIN+1cirQKF4JRJLgoSqjUIFrook0juDGKtNAKBDH6m5qJA+/A5+WOFXPPMAtfuIv7nXO+973n+7uwjxJGHLgN7ABLwNliktcAz4CsebaA88UgrwaeiPQDcAZ4pPdN4JRP8nJDtgGclP0A8NiIOuFLwA2RfATaQsIyr/V3wDEfAj6LIJlnvQ54rj33oyaPAd/kvH6PfRe0Zx0PmJPzy3nWXUJ+0p5xHwJ65fyVbiQf+QOgyoeAKl2tI+kx9jJlv7M/9EWew5CIVlSWOUzJPolnVAKvRXbF2E8Dv4FfQLtvEZckwM2BhLHflP2lmpNX3BHZgknIg8Ab2aeVG95wRO3YkY0EQrEl+wxQG3LWlfGiRDYVIqJbcc8AfcbeYUQsA+fM2mhgir4FWgoRMSJH34FOYz8OpLTmEvMWMKb3NDAAvIhCRAyYMP8EycCAcl/803xx2vSQeFQiyoF7cvRFobFwY/uubsk2sDARzYWImDBXfj2kCg7lOWtFuGlKIeEYVmJm5bT1H88mFKofIXPmv9EFvJeIr8C1v8yHBpOws0SEemV+Ro7XgEGgYg9yN18aiRgX1QtyVeA65VXgqP4dc+QpifGCMqAfWA00oWwxyIOV4gbZU+XGtirn8K5d+ygl/AE3xpvuGHiprQAAAABJRU5ErkJggg==" alt="Телефон" class="contact-icon" width="24" height="24">
+          <span class="contact-text">+38 (067) 266-09-09</span>
         </a>
-      </li>
-    </ul>
+      </div>
+      <div class="header-contact-item">
+        <a href="https://maps.app.goo.gl/Kv3WgYHVRWyWMSN87" target="_blank" rel="noopener noreferrer" class="header-contact-link">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAABI0lEQVR4nO2WMYoCMRSGP60sBM8gKBaewQu4hZW1na0ewXIPYGOxsLdQ2WYP4A2m8AiC9kaEXwnZZCZxGmHzQxiG5Ht5k2TyfsjKSlMTaNRgJy+ydIAlUABHYAV0E9iFWJM6cR/4BE6C3XYA5kDbw/YCbNRSfQB74Cro/txaQb6Bi/V+Br6AETAGdiVspQon8BoYqM8Ocv/qGfBrTWYi2VIZtaX2z9fnqqtz8Qr7R2UDq4LUYZ/KCZi8BeRDSP4NyReR4c2u4o4KzKMvZEhi2KQEBiqpZ0+5vaoUzyxDUsUWKQlsHVOxk9kYyXzYgS8yKSF2L5PTTEnAKPAGGHrGtYAp8BMwJGVsZQKFjKRrKkJ6GJKjWJ8hidYkdqk8atRgs/6pbl+73PeqYTxQAAAAAElFTkSuQmCC" alt="Адреса" class="contact-icon" width="24" height="24">
+          <span class="contact-text">м. Київ, вул. Лебединська, 4</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="header-social">
+      <a href="#" class="social-link" aria-label="Facebook">
+        <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2048%2048'%20width='48px'%20height='48px'%3e%3clinearGradient%20id='Ld6sqrtcxMyckEl6xeDdMa'%20x1='9.993'%20x2='40.615'%20y1='9.993'%20y2='40.615'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20offset='0'%20stop-color='%232aa4f4'/%3e%3cstop%20offset='1'%20stop-color='%23007ad9'/%3e%3c/linearGradient%3e%3cpath%20fill='url(%23Ld6sqrtcxMyckEl6xeDdMa)'%20d='M24,4C12.954,4,4,12.954,4,24s8.954,20,20,20s20-8.954,20-20S35.046,4,24,4z'/%3e%3cpath%20fill='%23fff'%20d='M26.707,29.301h5.176l0.813-5.258h-5.989v-2.874c0-2.184,0.714-4.121,2.757-4.121h3.283V12.46%20c-0.577-0.078-1.797-0.248-4.102-0.248c-4.814,0-7.636,2.542-7.636,8.334v3.498H16.06v5.258h4.948v14.452%20C21.988,43.9,22.981,44,24,44c0.921,0,1.82-0.084,2.707-0.204V29.301z'/%3e%3c/svg%3e" alt="Facebook" width="40" height="40">
+      </a>
+      <a href="#" class="social-link" aria-label="Instagram">
+        <img src="/FKS_Vite/assets/icon-insta-t8lEWnnA.svg" alt="Instagram" width="40" height="40">
+      </a>
+    </div>
+
+    <a href="#" class="order-button">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAsQAAALEBxi1JjQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAQCSURBVEiJlZRbbBRVGMd/Z2av3XvZttsLUNkibWgjLZdapIkEQ4yIBqMQeEGNGKMoXuAB7ZOgiYaXRkFJvBOJaDRSeSCKRmgEI2WRQm21LW0tlC50221Lu7vM7IwPDc3a7mzLl5yH813+v/N9Z87A7Mzm83CgMECkMEDE52E/YJtlbWbzONk0L59wWQlqUwN6UwP64qDQSovFWJ6fzTPVmzIFfW62+DwcfGAVzlT/fSt0gSKyGpvEIbtVt3Rf5XMjDSmDvsvt4p1P902Iu52QZZ9Ybidg1vngdVl2WEU9/P8AqSYbBex2Hn/1GTbXLscUHYW67ZCTPbHW1kL3Fbi3EqSYbP2jTWtJKFxMpyOMAAV5fLlxHVvKSjL0qMNf52VO/Jn8oaWDR9KlGN6BkhAPlWab0AczAICyYjh8QqsFPW3cEKBqDO47Iutms81slCOE2aSqsVtJTTU8hhEgYLf57KMxzdvf+IUYG48D4Mia+PRv721WCwUrtto83lwGR8IBoH+qkNElb6h7adPGh9csN1eVB/nu+Bnau/sov3s+wOS+orQYl9NOwO+znA61XQCap3VpAChbFCw89cm7O/wrl5ZOOnuuXgdgfmHupO+X0828sufjRHNr1xKgbbYATCZTbZbNcmz40lfu2773PjuGEILtW9cBEB6IsnjN84mxhLo2Ho+fSqdj+NBUVW10O+1/d3RfA+DG4DCnz7VyJtTGYHQUdPinq48cv7fHSBwyPDSAWEI9//2PZzasW73MMbcgh3jiFguL86lesoizF9t5amd9rLd/aL2iKH1GGoYjSrGKOT73yYaP6rw3x2MCHRRVZdvu/bFr4cFqSP+C7wQgcrI91++al2eOjtyUZUk2e9yO5OWea2PXI8O5MxVn+puacM6pJ6n4K8sXiINvv+BJDT67+/3xn5ouH0E2D3AzsgNQ7wQgOSzsGvfP3+KUE9KNcJ8UutRJaUkRAK3tV7gR7rO5CuY+OKZZ9WwtEh4YZy+gTWs/nXieixMVhdSclO+P+6RR9t4T8v7WKYZb+mUBUB5I6iuDuqfuQlU0qrvE6sSvrs4hQh0DVE+FTOvA7+K1J2tY/sQyYas5Shygah5sW6V7Uqdw7l/gAug6+p5HhfT17/rSb1vZ3RXhrYwd5HvobX9TFB0OSdpzDTlxWWhUFShJt8uUTM0bGVXlUJ9ZTiJLB9YPWB4rUqSaD4l2RvBl6mDhAj92hxVePp4zzq4jzqSQOJtmjpN2pZsXv3lDeXpnr1Ts1R2dEUqADiNAxcogdgBNtkBwaSbpiRGYvOiSGckMlQFMP3dSkQqYOqLaPBdHHVaS3UOyR5tTNDwzQbaKSG9W0KuMKEnsPUOsBRpvh/8DDHFt5RIntdwAAAAASUVORK5CYII=" alt="Worker" class="worker-icon" width="24" height="24">
+      <span>Виклик замірника</span>
+    </a>
     <button
-      type="button"
-      class="menu-button"
-      aria-expanded="false"
-      aria-controls="mobile-menu"
-    >
-      <span class="menu-button-line"></span>
-    </button>
+        type="button"
+        class="menu-button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span class="menu-button-line"></span>
+      </button>
+  </div>
+
+  <!-- Bottom header section with navigation -->
+  <div class="header-bottom">
+    <div class="container header-container">
+      <div class="menu-container" id="mobile-menu">
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="./" class="nav-link current">Головна</a>
+            </li>
+            <li class="nav-item">
+              <a href="./about.html" class="nav-link">Про компанію</a>
+            </li>
+            <li class="nav-item has-submenu">
+              <a href="./products.html" class="nav-link">Вироби з каменю</a>
+              <ul class="submenu">
+                <li class="submenu-item"><a href="./products.html?category=countertops" class="submenu-link">Стільниці</a></li>
+                <li class="submenu-item"><a href="./products.html?category=windowsills" class="submenu-link">Підвіконня</a></li>
+                <li class="submenu-item"><a href="./products.html?category=stairs" class="submenu-link">Сходи</a></li>
+                <li class="submenu-item"><a href="./products.html?category=fireplaces" class="submenu-link">Каміни</a></li>
+                <li class="submenu-item"><a href="./products.html?category=floors" class="submenu-link">Підлоги</a></li>
+                <li class="submenu-item"><a href="./products.html?category=bathrooms" class="submenu-link">Ванна кімната</a></li>
+                <li class="submenu-item"><a href="./products.html?category=tiles" class="submenu-link">Плитка</a></li>
+                <li class="submenu-item"><a href="./products.html?category=monuments" class="submenu-link">Пам'ятники</a></li>
+                <li class="submenu-item"><a href="./products.html?category=paving" class="submenu-link">Бруківка</a></li>
+                <li class="submenu-item"><a href="./products.html?category=slabs" class="submenu-link">Слеби</a></li>
+                <li class="submenu-item"><a href="./products.html?category=rosettes" class="submenu-link">Розетки пано</a></li>
+                <li class="submenu-item"><a href="./products.html?category=entrances" class="submenu-link">Вхідні групи</a></li>
+                <li class="submenu-item"><a href="./products.html?category=church" class="submenu-link">Церковні роботи</a></li>
+              </ul>
+            </li>
+            <li class="nav-item has-submenu">
+              <a href="./stones.html" class="nav-link">Каталог каменю</a>
+              <ul class="submenu">
+                <li class="submenu-item"><a href="./stones.html?type=granite-ukraine" class="submenu-link">Граніт України</a></li>
+                <li class="submenu-item"><a href="./stones.html?type=granite" class="submenu-link">Граніт</a></li>
+                <li class="submenu-item"><a href="./stones.html?type=marble" class="submenu-link">Мармур</a></li>
+                <li class="submenu-item"><a href="./stones.html?type=quartzite" class="submenu-link">Кварцит</a></li>
+                <li class="submenu-item"><a href="./stones.html?type=travertine" class="submenu-link">Травертин</a></li>
+                <li class="submenu-item"><a href="./stones.html?type=onyx" class="submenu-link">Онікс</a></li>
+                <li class="submenu-item"><a href="./stones.html?type=sandstone" class="submenu-link">Піщаник</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="./portfolio.html" class="nav-link">Портфоліо</a>
+            </li>
+            <li class="nav-item">
+              <a href="./contacts.html" class="nav-link">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      
+    </div>
   </div>
 </header>
 
@@ -128,6 +166,7 @@
       <h3 class="footer-title">Навігація</h3>
       <ul class="footer-nav-list">
         <li class="footer-nav-item"><a href="./" class="footer-link">Головна</a></li>
+        <li class="footer-nav-item"><a href="./about.html" class="footer-link">Про компанію</a></li>
         <li class="footer-nav-item"><a href="./products.html" class="footer-link">Вироби з каменю</a></li>
         <li class="footer-nav-item"><a href="./stones.html" class="footer-link">Каталог каменю</a></li>
         <li class="footer-nav-item"><a href="./portfolio.html" class="footer-link">Портфоліо</a></li>
