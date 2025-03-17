@@ -3,14 +3,6 @@
   background-color: var(--light-color);
 }
 
-/* .section-title {
-  margin-bottom: 16px;
-  font-size: 48px;
-  font-weight: 700;
-  text-align: center;
-  color: var(--primary-color);
-} */
-
 .section-description {
   max-width: 700px;
   margin: 0 auto 48px;
@@ -86,9 +78,6 @@
 }
 
 @media screen and (max-width: 1199px) {
-/*   .section-title {
-    font-size: 40px;
-  } */
   .products-title {
     font-size: 28px;
   }
@@ -101,9 +90,6 @@
   .products-list {
     grid-template-columns: repeat(2, 1fr);
   }
-/*   .section-title {
-    font-size: 32px;
-  } */
   .section-description {
     font-size: 16px;
   }

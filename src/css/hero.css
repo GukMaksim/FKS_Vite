@@ -1,20 +1,62 @@
 .hero {
-  padding: 120px 0;
-  background-color: var(--light-color);
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
   overflow: hidden;
 }
 
-.hero-container {
+.hero-slider {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  gap: 40px;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-slide-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.hero-slide-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
 }
 
 .hero-content {
-  flex: 1;
-  max-width: 600px;
+  position: relative;
+  z-index: 3;
+  color: var(--light-color);
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .hero-title {
@@ -22,18 +64,24 @@
   font-size: 48px;
   font-weight: 700;
   line-height: 1.2;
-  color: var(--primary-color);
+  color: var(--light-color);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-description {
   margin-bottom: 32px;
   font-size: 18px;
   line-height: 1.6;
-  color: var(--secondary-color);
+  color: var(--light-color);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-buttons {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 16px;
 }
@@ -64,47 +112,84 @@
   background-color: #a88555;
 }
 
-.btn-secondary {
-  background-color: transparent;
-  color: var(--primary-color);
-  border: 1px solid var(--accent-color);
-}
-
-.btn-secondary:hover,
-.btn-secondary:focus {
-  background-color: var(--accent-color);
+/* Slider navigation */
+.hero-slider-button-prev,
+.hero-slider-button-next {
+  position: absolute;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  margin-top: -22px;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--light-color);
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
 }
 
-.hero-image {
-  flex: 1;
-  max-width: 600px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  margin-top: 10px;
+.hero-slider-button-prev:hover,
+.hero-slider-button-next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.hero-img {
-  height: 390px;
-  object-fit: cover;
+.hero-slider-button-prev {
+  left: 20px;
+}
+
+.hero-slider-button-next {
+  right: 20px;
+}
+
+.hero-slider-button-prev::after,
+.hero-slider-button-next::after {
+  font-family: 'swiper-icons';
+  font-size: 24px;
+  text-transform: none !important;
+  letter-spacing: 0;
+  font-variant: initial;
+  line-height: 1;
+}
+
+.hero-slider-button-prev::after {
+  content: 'prev';
+}
+
+.hero-slider-button-next::after {
+  content: 'next';
+}
+
+/* Pagination */
+.hero-slider-pagination {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.hero-slider-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  background: var(--light-color);
+  opacity: 0.5;
+  margin: 0 5px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hero-slider-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+  transform: scale(1.2);
 }
 
 /* Tablet styles */
 @media screen and (max-width: 1199px) {
-  .hero {
-    padding: 80px 0;
-  }
-  
-  .hero-container {
-    flex-direction: column;
-  }
-
-  .hero-img {
-  width: 100%;
-  height: auto;
-  }
-  
   .hero-title {
     font-size: 40px;
   }
@@ -112,6 +197,10 @@
 
 /* Mobile styles */
 @media screen and (max-width: 767px) {
+  .hero {
+    min-height: 500px;
+  }
+  
   .hero-title {
     font-size: 32px;
   }
@@ -120,8 +209,18 @@
     font-size: 16px;
   }
   
-  .hero-image {
-    width: 100%;
-    max-width: none;
+  .hero-slider-button-prev,
+  .hero-slider-button-next {
+    width: 36px;
+    height: 36px;
+    margin-top: -18px;
+  }
+  
+  .hero-slider-button-prev {
+    left: 10px;
+  }
+  
+  .hero-slider-button-next {
+    right: 10px;
   }
 }
