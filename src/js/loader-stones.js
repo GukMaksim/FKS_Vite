@@ -16,7 +16,7 @@ function renderStoneCatalog(type = null, item = null) {
       
       if (stoneItem) {
         content = `
-          <h2 class="stone-title">${stoneItem.title}</h2>
+          <h1 class="section-title">${stoneItem.title}</h1>
           <div class="stone-type-details">
             <div class="stone-type-image-big">
               <img src="${stoneItem.image}" alt="${stoneItem.title}" />
@@ -46,7 +46,7 @@ function renderStoneCatalog(type = null, item = null) {
       // Відображення конкретного типу каменю
       const stoneType = stoneTypes[type];
       content = `
-        <h2 class="stone-title">${stoneType.title}</h2>
+        <h1 class="section-title">${stoneType.title}</h1>
         <div class="stone-variants-grid">
           ${stoneType.items.map(item => `
             <div class="stone-variant-card">
@@ -65,7 +65,7 @@ function renderStoneCatalog(type = null, item = null) {
     } else {
       // Відображення всіх типів каменю
       content = `
-        <h2 class="stone-title">Каталог каменю</h2>
+        <h1 class="section-title">Каталог каменю</h1>
         <div class="stone-types-grid">
           ${Object.entries(stoneTypes).map(([key, value]) => `
             <div class="stone-type-card">

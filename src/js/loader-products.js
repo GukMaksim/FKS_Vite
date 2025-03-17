@@ -36,7 +36,7 @@ function renderProductCatalog(category = null) {
     } else {
       // Відображення всіх категорій виробів
       content = `
-        <h2 class="section-title">ВИРОБИ З КАМЕНЮ</h2>
+        <h1 class="section-title">Вироби з каменю</h1>
         <p class="section-description">Широкий асортимент виробів з натурального каменю найвищої якості</p>
         <div class="product-categories-grid">
           ${Object.entries(productCategories).map(([key, value]) => `
