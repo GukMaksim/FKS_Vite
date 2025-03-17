@@ -42,3 +42,18 @@ main:has(.back-link) {
   margin: 0 auto;
   padding: 0 16px;
 }
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c2c2c;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1199px) {
+/*   .section-title {
+    font-size: 40px;
+  } */
+} 

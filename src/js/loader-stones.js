@@ -1,22 +1,11 @@
-// Функція для отримання параметрів з URL
-function getUrlParams() {
-    const params = new URLSearchParams(window.location.search);
-    return {
-      type: params.get('type'),
-      item: params.get('item')
-    };
-  }
-
-  // Імпортуємо дані з окремого файлу
+// Імпортуємо дані з окремого файлу та утиліти
 import { stoneTypes } from './data-stones.js';
+import { getUrlParams, getContainer, renderContent, isCurrentPage, isHomePage } from './catalog-utils.js';
 
 // Функція для відображення каталогу каменю
 function renderStoneCatalog(type = null, item = null) {
-    const container = document.querySelector('.dataContainer');
-    if (!container) {
-        console.error('Container element not found');
-        return;
-      }
+    const container = getContainer('.dataContainer');
+    if (!container) return;
 
     let content = '';
   
@@ -27,7 +16,7 @@ function renderStoneCatalog(type = null, item = null) {
       
       if (stoneItem) {
         content = `
-          <h2 class="stone-title">${stoneItem.title}</h2>
+          <h1 class="section-title">${stoneItem.title}</h1>
           <div class="stone-type-details">
             <div class="stone-type-image-big">
               <img src="${stoneItem.image}" alt="${stoneItem.title}" />
@@ -57,16 +46,7 @@ function renderStoneCatalog(type = null, item = null) {
       // Відображення конкретного типу каменю
       const stoneType = stoneTypes[type];
       content = `
-        <h2 class="stone-title">${stoneType.title}</h2>
-        <div class="stone-type-details">
-          <div class="stone-type-image">
-            <img src="${stoneType.image}" alt="${stoneType.title}" />
-          </div>
-          <div class="stone-type-info">
-            <p class="stone-type-description">${stoneType.description}</p>
-          </div>
-        </div>
-        <h3>Варіанти ${stoneType.title}</h3>
+        <h1 class="section-title">${stoneType.title}</h1>
         <div class="stone-variants-grid">
           ${stoneType.items.map(item => `
             <div class="stone-variant-card">
@@ -76,7 +56,6 @@ function renderStoneCatalog(type = null, item = null) {
                 </div>
                 <div class="stone-variant-info">
                   <h4>${item.title}</h4>
-                  <p>${item.description}</p>
                 </div>
               </a>
             </div>
@@ -86,7 +65,7 @@ function renderStoneCatalog(type = null, item = null) {
     } else {
       // Відображення всіх типів каменю
       content = `
-        <h2 class="stone-title">Каталог каменю</h2>
+        <h1 class="section-title">Каталог каменю</h1>
         <div class="stone-types-grid">
           ${Object.entries(stoneTypes).map(([key, value]) => `
             <div class="stone-type-card">
@@ -104,14 +83,41 @@ function renderStoneCatalog(type = null, item = null) {
       `;
     }
   
-    container.innerHTML = content;
+    renderContent(container, content);
   }
 
-  // Функція ініціалізації каталогів
+  // Функція для відображення каталогу каменю на головній сторінці
+function renderMainPageStoneCatalog() {
+    const container = getContainer('.stone-types-grid');
+    if (!container) return;
+
+    // Відображаємо перші 6 типів каменю (або всі, якщо їх менше 6)
+    const stoneEntries = Object.entries(stoneTypes).slice(0, 6);
+    
+    const content = stoneEntries.map(([key, value]) => `
+        <div class="stone-type-card">
+            <div class="stone-type-image">
+                <img src="${value.image}" alt="${value.title}" loading="lazy" />
+            </div>
+            <div class="stone-type-info">
+                <h3>${value.title}</h3>
+                <p>${value.description}</p>
+                <a href="./stones.html?type=${key}" class="btn btn-secondary">Переглянути</a>
+            </div>
+        </div>
+    `).join('');
+    
+    renderContent(container, content);
+}
+
+// Функція ініціалізації каталогів
 export function initStones() {
-    const { type, item } = getUrlParams();
-    const path = window.location.pathname;
-    if (path.includes('/stones.html')) {
-      renderStoneCatalog(type, item);
+    const params = getUrlParams({ type: 'type', item: 'item' });
+    
+    if (isCurrentPage('/stones.html')) {
+      renderStoneCatalog(params.type, params.item);
+    } else if (isHomePage()) {
+      // Якщо це головна сторінка, відображаємо спрощений каталог
+      renderMainPageStoneCatalog();
     }
   }

@@ -1,21 +1,11 @@
-// Функція для отримання параметрів з URL
-function getUrlParams() {
-    const params = new URLSearchParams(window.location.search);
-    return {
-      category: params.get('category')
-    };
-  }
-
-  // Імпортуємо дані з окремого файлу
+// Імпортуємо дані з окремого файлу та утиліти
 import { productCategories } from './data-products.js';
+import { getUrlParams, getContainer, renderContent, isCurrentPage } from './catalog-utils.js';
 
 // Функція для відображення каталогу виробів
 function renderProductCatalog(category = null) {
-    const container = document.querySelector('.dataContainer');
-    if (!container) {
-      console.error('Container element not found');
-      return;
-    }
+    const container = getContainer('.dataContainer');
+    if (!container) return;
     
     let content = '';
   
@@ -46,7 +36,7 @@ function renderProductCatalog(category = null) {
     } else {
       // Відображення всіх категорій виробів
       content = `
-        <h2 class="section-title">ВИРОБИ З КАМЕНЮ</h2>
+        <h1 class="section-title">Вироби з каменю</h1>
         <p class="section-description">Широкий асортимент виробів з натурального каменю найвищої якості</p>
         <div class="product-categories-grid">
           ${Object.entries(productCategories).map(([key, value]) => `
@@ -65,14 +55,14 @@ function renderProductCatalog(category = null) {
       `;
     }
 
-    container.innerHTML = content;
+    renderContent(container, content);
   }
 
   // Функція ініціалізації каталогів
   export function initProducts() {
-    const { category } = getUrlParams();
-    const path = window.location.pathname;
-    if (path.includes('/products.html')) {
-      renderProductCatalog(category);
+    const params = getUrlParams({ category: 'category' });
+    
+    if (isCurrentPage('/products.html')) {
+      renderProductCatalog(params.category);
     } 
   }

@@ -1,176 +1,75 @@
-import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
-import { productCategories } from './data-products.js';
-
-// Function to initialize sliders
-function initPortfolioSliders() {
-  // Only create placeholders in development mode
-  if (process.env.NODE_ENV === 'development') {
-    createPlaceholderImages();
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all gallery items
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  const lightbox = document.getElementById('portfolio-lightbox');
+  const lightboxImage = document.getElementById('lightbox-image');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  const closeBtn = document.querySelector('.lightbox-close');
+  const prevBtn = document.querySelector('.lightbox-prev');
+  const nextBtn = document.querySelector('.lightbox-next');
+  
+  let currentIndex = 0;
+  
+  // Function to open lightbox
+  function openLightbox(index) {
+    const item = galleryItems[index];
+    const imgSrc = item.querySelector('.gallery-image').src;
+    const caption = item.querySelector('.gallery-caption').textContent;
+    
+    lightboxImage.src = imgSrc;
+    lightboxCaption.textContent = caption;
+    lightbox.style.display = 'flex';
+    lightbox.classList.add('active');
+    currentIndex = index;
   }
-
-  // Get all product categories and initialize sliders dynamically
-  Object.entries(productCategories).forEach(([key, category]) => {
-    if (category.items && category.items.length > 0) {
-      initSlider(key, category.items);
-    }
-  });
-}
-
-// Function to create and show lightbox
-function showLightbox(imageSrc) {
-  const lightbox = document.createElement('div');
-  lightbox.className = 'portfolio-lightbox';
-
-  const img = document.createElement('img');
-  img.src = imageSrc;
-  img.alt = 'Full size image';
-
-  lightbox.appendChild(img);
-  document.body.appendChild(lightbox);
-
-  // Add fade-in effect
-  setTimeout(() => lightbox.classList.add('active'), 10);
-
-  // Close lightbox on click
-  lightbox.addEventListener('click', () => {
+  
+  // Function to close lightbox
+  function closeLightbox() {
     lightbox.classList.remove('active');
-    setTimeout(() => lightbox.remove(), 300);
-  });
-}
-
-// Function to initialize a specific slider
-function initSlider(category, items) {
-  const sliderSelector = `.${category}-slider`;
-  const sliderElement = document.querySelector(sliderSelector);
-
-  if (!sliderElement) return;
-
-  // Add slides to the wrapper
-  const swiperWrapper = sliderElement.querySelector('.swiper-wrapper');
-
-  items.forEach(item => {
-    const slide = document.createElement('div');
-    slide.className = 'swiper-slide';
-
-    const img = document.createElement('img');
-    img.src = item.image;
-    img.alt = item.title;
-    img.loading = 'lazy';
-
-    // Add click handler for lightbox
-    img.addEventListener('click', e => {
-      e.preventDefault();
-      showLightbox(item.image);
-    });
-
-    const caption = document.createElement('div');
-    caption.className = 'portfolio-item-caption';
-    caption.textContent = item.title;
-
-    slide.appendChild(img);
-    slide.appendChild(caption);
-    swiperWrapper.appendChild(slide);
-  });
-
-  // Initialize Swiper
-  new Swiper(sliderSelector, {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 40,
-      },
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 50,
-      },
-    },
-    centeredSlides: true,
-    grabCursor: true,
-    lazy: true,
-    effect: "coverflow",
-    coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-      },
-    loop: true,
-    pagination: {
-      el: `${sliderSelector} .swiper-pagination`,
-      clickable: true,
-    },
-    navigation: {
-      nextEl: `${sliderSelector} .swiper-button-next`,
-      prevEl: `${sliderSelector} .swiper-button-prev`,
-    },
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
+    setTimeout(() => {
+      lightbox.style.display = 'none';
+    }, 300); // Match the transition duration in CSS
+  }
+  
+  // Function to navigate to previous image
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+    openLightbox(currentIndex);
+  }
+  
+  // Function to navigate to next image
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % galleryItems.length;
+    openLightbox(currentIndex);
+  }
+  
+  // Add click event to each gallery item
+  galleryItems.forEach((item, index) => {
+    item.addEventListener('click', () => openLightbox(index));
   });
   
-  // Add 'Перейти' button after the slider
-  const portfolioCategory = sliderElement.closest('.portfolio-category');
-  if (portfolioCategory) {
-    // Check if button already exists
-    if (!portfolioCategory.querySelector('.category-link-button')) {
-      const linkButton = document.createElement('a');
-      linkButton.className = 'category-link-button';
-      linkButton.textContent = 'Перейти';
-      linkButton.href = `./products.html?category=${category}`;
-      
-      // Create a container for the button to center it
-      const buttonContainer = document.createElement('div');
-      buttonContainer.className = 'button-container';
-      buttonContainer.appendChild(linkButton);
-      
-      // Insert the button after the slider
-      portfolioCategory.appendChild(buttonContainer);
+  // Add event listeners for navigation
+  closeBtn.addEventListener('click', closeLightbox);
+  prevBtn.addEventListener('click', prevImage);
+  nextBtn.addEventListener('click', nextImage);
+  
+  // Close lightbox when clicking outside the image
+  lightbox.addEventListener('click', function(e) {
+    if (e.target === lightbox) {
+      closeLightbox();
     }
-  }
-}
-
-// Function to create placeholder images for development
-function createPlaceholderImages() {
-  // Check if we're in development and images don't exist
-  const testImage = new Image();
-  testImage.src = productCategories.countertops.items[0].image;
-
-  testImage.onerror = () => {
-    console.log('Using placeholder images for development');
-
-    // Replace image paths with placeholder images
-    Object.keys(productCategories).forEach(category => {
-      if (productCategories[category].items) {
-        productCategories[category].items.forEach(item => {
-          // Use placeholder.com for development placeholders
-          item.image = `https://via.placeholder.com/800x500?text=${category}+image`;
-        });
+  });
+  
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    if (lightbox.style.display === 'flex') {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      } else if (e.key === 'ArrowLeft') {
+        prevImage();
+      } else if (e.key === 'ArrowRight') {
+        nextImage();
       }
-    });
-
-    // Reinitialize sliders with placeholder images
-    initSlider('countertops', productCategories.countertops.items);
-    initSlider('windowsills', productCategories.windowsills.items);
-    initSlider('stairs', productCategories.stairs.items);
-    initSlider('fireplaces', productCategories.fireplaces.items);
-    initSlider('floors', productCategories.floors.items);
-    initSlider('bathrooms', productCategories.bathrooms.items);
-    initSlider('tiles', productCategories.tiles.items);
-    initSlider('monuments', productCategories.monuments.items);
-    initSlider('paving', productCategories.paving.items);
-    initSlider('slabs', productCategories.slabs.items);
-    initSlider('rosettes', productCategories.rosettes.items);
-  };
-}
-
-// Initialize portfolio sliders when DOM is loaded
-document.addEventListener('DOMContentLoaded', initPortfolioSliders);
+    }
+  });
+});

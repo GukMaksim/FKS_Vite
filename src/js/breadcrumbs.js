@@ -23,6 +23,7 @@ export function generateBreadcrumbs() {
     'stones.html': 'Каталог каменю',
     'portfolio.html': 'Портфоліо',
     'contacts.html': 'Контакти',
+    'about.html': 'Про компанію',
   };
 
   // Extract page name from path

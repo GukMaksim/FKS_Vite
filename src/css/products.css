@@ -1,15 +1,15 @@
 .products {
   padding: 80px 0;
-  background-color: #ffffff;
+  background-color: var(--light-color);
 }
 
-.section-title {
+/* .section-title {
   margin-bottom: 16px;
   font-size: 48px;
   font-weight: 700;
   text-align: center;
   color: var(--primary-color);
-}
+} */
 
 .section-description {
   max-width: 700px;
@@ -28,6 +28,7 @@
 }
 
 .products-item {
+  background: #fff;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
@@ -85,9 +86,9 @@
 }
 
 @media screen and (max-width: 1199px) {
-  .section-title {
+/*   .section-title {
     font-size: 40px;
-  }
+  } */
   .products-title {
     font-size: 28px;
   }
@@ -100,9 +101,9 @@
   .products-list {
     grid-template-columns: repeat(2, 1fr);
   }
-  .section-title {
+/*   .section-title {
     font-size: 32px;
-  }
+  } */
   .section-description {
     font-size: 16px;
   }
