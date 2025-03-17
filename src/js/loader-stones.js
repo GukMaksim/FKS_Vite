@@ -1,22 +1,11 @@
-// Функція для отримання параметрів з URL
-function getUrlParams() {
-    const params = new URLSearchParams(window.location.search);
-    return {
-      type: params.get('type'),
-      item: params.get('item')
-    };
-  }
-
-  // Імпортуємо дані з окремого файлу
+// Імпортуємо дані з окремого файлу та утиліти
 import { stoneTypes } from './data-stones.js';
+import { getUrlParams, getContainer, renderContent, isCurrentPage, isHomePage } from './catalog-utils.js';
 
 // Функція для відображення каталогу каменю
 function renderStoneCatalog(type = null, item = null) {
-    const container = document.querySelector('.dataContainer');
-    if (!container) {
-        console.error('Container element not found');
-        return;
-      }
+    const container = getContainer('.dataContainer');
+    if (!container) return;
 
     let content = '';
   
@@ -94,23 +83,18 @@ function renderStoneCatalog(type = null, item = null) {
       `;
     }
   
-    container.innerHTML = content;
+    renderContent(container, content);
   }
 
   // Функція для відображення каталогу каменю на головній сторінці
 function renderMainPageStoneCatalog() {
-    const container = document.querySelector('.stone-types-grid');
-    if (!container) {
-        console.error('Stone types grid container not found');
-        return;
-    }
+    const container = getContainer('.stone-types-grid');
+    if (!container) return;
 
-    let content = '';
-    
     // Відображаємо перші 6 типів каменю (або всі, якщо їх менше 6)
     const stoneEntries = Object.entries(stoneTypes).slice(0, 6);
     
-    content = stoneEntries.map(([key, value]) => `
+    const content = stoneEntries.map(([key, value]) => `
         <div class="stone-type-card">
             <div class="stone-type-image">
                 <img src="${value.image}" alt="${value.title}" loading="lazy" />
@@ -123,17 +107,16 @@ function renderMainPageStoneCatalog() {
         </div>
     `).join('');
     
-    container.innerHTML = content;
+    renderContent(container, content);
 }
 
-  // Функція ініціалізації каталогів
+// Функція ініціалізації каталогів
 export function initStones() {
-    const { type, item } = getUrlParams();
-    const path = window.location.pathname;
+    const params = getUrlParams({ type: 'type', item: 'item' });
     
-    if (path.includes('/stones.html')) {
-      renderStoneCatalog(type, item);
-    } else if (path.includes('/index.html') || path === '/' || path.endsWith('/')) {
+    if (isCurrentPage('/stones.html')) {
+      renderStoneCatalog(params.type, params.item);
+    } else if (isHomePage()) {
       // Якщо це головна сторінка, відображаємо спрощений каталог
       renderMainPageStoneCatalog();
     }
