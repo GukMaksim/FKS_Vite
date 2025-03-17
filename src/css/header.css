@@ -133,6 +133,9 @@
   font-size: 15px;
   letter-spacing: 0.5px;
   transition: all var(--transition);
+}
+
+.btn-pulse {
   box-shadow: 0 4px 16px rgba(193, 154, 107, 0.4);
   position: relative;
   overflow: hidden;

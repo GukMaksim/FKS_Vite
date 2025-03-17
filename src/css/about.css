@@ -4,6 +4,10 @@
   padding: 40px 0;
 }
 
+.about-part {
+  background-color:antiquewhite;
+}
+
 .about-container {
   max-width: 1200px;
   margin: 0 auto;
