@@ -1,5 +1,93 @@
 // Дані для каталогу каменю
 export const stoneTypes = {
+  marble: {
+    id: 'marble',
+    title: 'Мармур',
+    image: new URL('../img/products/stone/marble.jpg', import.meta.url).href,
+    description:
+      'Мармур - це натуральний камінь, який має унікальну природну форму та характеристики.',
+    items: [
+      {
+        id: 'marble-1',
+        title: 'Мармур 1',
+        image: new URL('../img/products/stone/marble-1.jpg', import.meta.url)
+          .href,
+        description:
+          'Мармур - це натуральний камінь, який має унікальну природну форму та характеристики.',
+      },
+      {
+        id: 'marble-2',
+        title: 'Мармур 2',
+        image: new URL('../img/products/stone/marble-2.jpg', import.meta.url)
+          .href,
+        description:
+          'Мармур - це натуральний камінь, який має унікальну природну форму та характеристики.',
+      },
+      {
+        id: 'marble-3',
+        title: 'Мармур 3',
+        image: new URL('../img/products/stone/marble-3.jpg', import.meta.url)
+          .href,
+        description:
+          'Мармур - це натуральний камінь, який має унікальну природну форму та характеристики.',
+      },
+    ],
+  },
+  granite: {
+    id: 'granite',
+    title: 'Граніт',
+    image: new URL('../img/products/stone/granite.jpeg', import.meta.url).href,
+    description:
+      'Граніт - це натуральний камінь, який має унікальну природну форму та характеристики.',
+    items: [
+      {
+        id: 'granite-baltic-brown',
+        title: 'Baltic Brown',
+        image: new URL('../img/products/stone/granite-baltic-brown.jpg', import.meta.url)
+          .href,
+        description:
+          'Цей граніт має теплий коричневий відтінок з характерними круглими візерунками, що надають йому унікального вигляду. Використовується для стільниць, підлогових покриттів та облицювання.',
+          characteristics: {
+            origin: 'Фінляндія',
+            color: 'Коричневий з чорними та сірими вкрапленнями',
+            thickness: '20-30 мм',
+            format: 'Квадратний',
+            price: 'від 1200 грн/м²',
+          },
+        },
+      {
+        id: 'granite-verde-ubatuba',
+        title: 'Verde Ubatuba',
+        image: new URL('../img/products/stone/granite-verde-ubatuba.jpeg', import.meta.url)
+          .href,
+        description:
+          'Цей граніт відомий своїм насиченим темно-зеленим кольором з дрібними золотистими вкрапленнями, що додають йому глибини. Часто використовується для стільниць, підвіконь та облицювання стін.',
+          characteristics: {
+            origin: 'Бразилія',
+            color: 'Темно-зелений з дрібними золотистими вкрапленнями',
+            thickness: '20-30 мм',
+            format: 'Квадратний',
+            price: 'від 1200 грн/м²',
+          },
+      },
+      {
+        id: 'granite-black-galaxy',
+        title: 'Black Galaxy',
+        image: new URL('../img/products/stone/granite-black-galaxy.jpg', import.meta.url)
+          .href,
+        description:
+          'Цей граніт має глибокий чорний фон з дрібними золотистими та сріблястими вкрапленнями, що нагадують зоряне небо. Використовується для стільниць, підлог та декоративних елементів.',
+          characteristics: {
+            origin: 'Індія',
+            color: 'Чорний з золотистими та сріблястими вкрапленнями',
+            thickness: '20-30 мм',
+            format: 'Квадратний',
+            price: 'від 1200 грн/м²',
+          },
+        
+      },
+    ],
+  },
   'granite-ukraine': {
     id: 'granite-ukraine',
     title: 'Граніт України',
@@ -61,91 +149,102 @@ export const stoneTypes = {
         },
     ],
   },
-  granite: {
-    id: 'granite',
-    title: 'Граніт',
-    image: new URL('../img/products/stone/granite.jpeg', import.meta.url).href,
+  onyx: {
+    id: 'onyx',
+    title: 'Онікс',
+    image: new URL('../img/products/stone/onyx.jpg', import.meta.url).href,
     description:
-      'Граніт - це натуральний камінь, який має унікальну природну форму та характеристики.',
+      'Онікс - це натуральний камінь, який має унікальну природну форму та характеристики.',
     items: [
       {
-        id: 'granite-baltic-brown',
-        title: 'Baltic Brown',
-        image: new URL('../img/products/stone/granite-baltic-brown.jpg', import.meta.url)
+        id: 'onyx-1',
+        title: 'Онікс 1',
+        image: new URL('../img/products/stone/onyx.jpg', import.meta.url)
           .href,
         description:
-          'Цей граніт має теплий коричневий відтінок з характерними круглими візерунками, що надають йому унікального вигляду. Використовується для стільниць, підлогових покриттів та облицювання.',
-          characteristics: {
-            origin: 'Фінляндія',
-            color: 'Коричневий з чорними та сірими вкрапленнями',
-            thickness: '20-30 мм',
-            format: 'Квадратний',
-            price: 'від 1200 грн/м²',
-          },
-        },
-      {
-        id: 'granite-verde-ubatuba',
-        title: 'Verde Ubatuba',
-        image: new URL('../img/products/stone/granite-verde-ubatuba.jpeg', import.meta.url)
-          .href,
-        description:
-          'Цей граніт відомий своїм насиченим темно-зеленим кольором з дрібними золотистими вкрапленнями, що додають йому глибини. Часто використовується для стільниць, підвіконь та облицювання стін.',
-          characteristics: {
-            origin: 'Бразилія',
-            color: 'Темно-зелений з дрібними золотистими вкрапленнями',
-            thickness: '20-30 мм',
-            format: 'Квадратний',
-            price: 'від 1200 грн/м²',
-          },
+          'Онікс - це натуральний камінь, який має унікальну природну форму та характеристики.',
       },
       {
-        id: 'granite-black-galaxy',
-        title: 'Black Galaxy',
-        image: new URL('../img/products/stone/granite-black-galaxy.jpg', import.meta.url)
+        id: 'onyx-2',
+        title: 'Онікс 2',
+        image: new URL('../img/products/stone/onyx.jpg', import.meta.url)
           .href,
         description:
-          'Цей граніт має глибокий чорний фон з дрібними золотистими та сріблястими вкрапленнями, що нагадують зоряне небо. Використовується для стільниць, підлог та декоративних елементів.',
-          characteristics: {
-            origin: 'Індія',
-            color: 'Чорний з золотистими та сріблястими вкрапленнями',
-            thickness: '20-30 мм',
-            format: 'Квадратний',
-            price: 'від 1200 грн/м²',
-          },
-        
+          'Онікс - це натуральний камінь, який має унікальну природну форму та характеристики.',
+      },
+      {
+        id: 'onyx-3',
+        title: 'Онікс 3',
+        image: new URL('../img/products/stone/onyx.jpg', import.meta.url)
+          .href,
+        description:
+          'Онікс - це натуральний камінь, який має унікальну природну форму та характеристики.',
       },
     ],
   },
-  marble: {
-    id: 'marble',
-    title: 'Мармур',
-    image: new URL('../img/products/stone/marble.jpg', import.meta.url).href,
+  travertine: {
+    id: 'travertine',
+    title: 'Травертін',
+    image: new URL('../img/products/stone/travertine.jpg', import.meta.url).href,
     description:
-      'Мармур - це натуральний камінь, який має унікальну природну форму та характеристики.',
+      'Травертін - це натуральний камінь, який має унікальну природну форму та характеристики.',
     items: [
       {
-        id: 'marble-1',
-        title: 'Мармур 1',
-        image: new URL('../img/products/stone/marble-1.jpg', import.meta.url)
+        id: 'travertine-1',
+        title: 'Травертін 1',
+        image: new URL('../img/products/stone/travertine.jpg', import.meta.url)
           .href,
         description:
-          'Мармур - це натуральний камінь, який має унікальну природну форму та характеристики.',
+          'Травертін - це натуральний камінь, який має унікальну природну форму та характеристики.',
       },
       {
-        id: 'marble-2',
-        title: 'Мармур 2',
-        image: new URL('../img/products/stone/marble-2.jpg', import.meta.url)
+        id: 'travertine-2',
+        title: 'Травертін 2',
+        image: new URL('../img/products/stone/travertine.jpg', import.meta.url)
           .href,
         description:
-          'Мармур - це натуральний камінь, який має унікальну природну форму та характеристики.',
+          'Травертін - це натуральний камінь, який має унікальну природну форму та характеристики.',
       },
       {
-        id: 'marble-3',
-        title: 'Мармур 3',
-        image: new URL('../img/products/stone/marble-3.jpg', import.meta.url)
+        id: 'travertine-3',
+        title: 'Травертін 3',
+        image: new URL('../img/products/stone/travertine.jpg', import.meta.url)
           .href,
         description:
-          'Мармур - це натуральний камінь, який має унікальну природну форму та характеристики.',
+          'Травертін - це натуральний камінь, який має унікальну природну форму та характеристики.',
+      },
+    ],
+  },
+  quartzite: {
+    id: 'quartzite',
+    title: 'Кварцит',
+    image: new URL('../img/products/stone/quartzite.jpg', import.meta.url).href,
+    description:
+      'Кварцит - це натуральний камінь, який має унікальну природну форму та характеристики.',
+    items: [
+      {
+        id: 'quartzite-1',
+        title: 'Кварцит 1',
+        image: new URL('../img/products/stone/quartzite.jpg', import.meta.url)
+          .href,
+        description:
+          'Кварцит - це натуральний камінь, який має унікальну природну форму та характеристики.',
+      },
+      {
+        id: 'quartzite-2',
+        title: 'Кварцит 2',
+        image: new URL('../img/products/stone/quartzite.jpg', import.meta.url)
+          .href,
+        description:
+          'Кварцит - це натуральний камінь, який має унікальну природну форму та характеристики.',
+      },
+      {
+        id: 'quartzite-3',
+        title: 'Кварцит 3',
+        image: new URL('../img/products/stone/quartzite.jpg', import.meta.url)
+          .href,
+        description:
+          'Кварцит - це натуральний камінь, який має унікальну природну форму та характеристики.',
       },
     ],
   },
