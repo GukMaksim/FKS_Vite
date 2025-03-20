@@ -81,7 +81,7 @@ function renderMainPageStoneCatalog() {
                 <div class="stone-type-info">
                     <h3>${value.title}</h3>
                     <p>${value.description}</p>
-                    <a href="./stones.html?type=${key}" class="btn btn-primary">Переглянути</a>
+                    <a href="./stones.html?type=${key}" class="btn btn-secondary">Переглянути</a>
                 </div>
             </div>
         `

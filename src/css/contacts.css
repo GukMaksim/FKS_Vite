@@ -117,21 +117,13 @@
   .contacts {
     padding: 20px 0;
   }
-  
-/*   .contacts-title {
-    font-size: 28px;
-    margin-bottom: 32px;
-  } */
-  
   .contacts-subtitle {
     font-size: 20px;
     margin-bottom: 16px;
   }
-  
   .contacts-form {
     padding: 24px;
   }
-  
   .contacts-map {
     height: 350px;
   }

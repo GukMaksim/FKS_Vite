@@ -94,7 +94,6 @@ function renderSearchResults(results) {
                                         </div>
                                         <div class="search-result-info">
                                             <h4>${item.title}</h4>
-                                            <p>${item.description}</p>
                                         </div>
                                     </a>
                                 </div>
@@ -115,7 +114,6 @@ function renderSearchResults(results) {
                                         </div>
                                         <div class="search-result-info">
                                             <h4>${item.title}</h4>
-                                            <p>${item.description}</p>
                                         </div>
                                     </a>
                                 </div>

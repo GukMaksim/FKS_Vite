@@ -1,0 +1,93 @@
+/* Базові стилі для всіх кнопок */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition),
+    transform var(--transition);
+}
+
+.btn:hover,
+.btn:focus {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Основна кнопка */
+.btn-primary {
+  background-color: var(--accent-color);
+  color: var(--light-color);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: #d3a970;
+}
+
+/* Вторинна кнопка */
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+/* Order button */
+.btn-order {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--accent-color);
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+/* Пульсуюча кнопка */
+.btn-pulse {
+  box-shadow: 0 4px 16px rgba(193, 154, 107, 0.4);
+  position: relative;
+  overflow: hidden;
+  animation: pulse 2s infinite;
+  transform: scale(1);
+}
+
+.btn-pulse:hover {
+  background-color: #d3a970; /* Slightly brighter than accent color */
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(193, 154, 107, 0.6);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(193, 154, 107, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(193, 154, 107, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(193, 154, 107, 0);
+  }
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media screen and (max-width: 1199px) {
+  .btn-order {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

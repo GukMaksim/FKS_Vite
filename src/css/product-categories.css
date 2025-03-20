@@ -76,20 +76,6 @@
   margin-bottom: 20px;
 }
 
-.category-link {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #2c2c2c;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-.category-link:hover {
-  background-color: #444;
-}
-
 /* Product Category Details Styles */
 .product-category-details {
   max-width: 1200px;
