@@ -14,6 +14,14 @@ export const stoneTypes = {
           .href,
         description:
           'Мармур - це натуральний камінь, який має унікальну природну форму та характеристики.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: true,
       },
       {
         id: 'marble-2',
@@ -22,6 +30,14 @@ export const stoneTypes = {
           .href,
         description:
           'Мармур - це натуральний камінь, який має унікальну природну форму та характеристики.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: true,
       },
       {
         id: 'marble-3',
@@ -30,6 +46,14 @@ export const stoneTypes = {
           .href,
         description:
           'Мармур - це натуральний камінь, який має унікальну природну форму та характеристики.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: true,
       },
     ],
   },
@@ -43,48 +67,56 @@ export const stoneTypes = {
       {
         id: 'granite-baltic-brown',
         title: 'Baltic Brown',
-        image: new URL('../img/products/stone/granite-baltic-brown.jpg', import.meta.url)
-          .href,
+        image: new URL(
+          '../img/products/stone/granite-baltic-brown.jpg',
+          import.meta.url
+        ).href,
         description:
           'Цей граніт має теплий коричневий відтінок з характерними круглими візерунками, що надають йому унікального вигляду. Використовується для стільниць, підлогових покриттів та облицювання.',
-          characteristics: {
-            origin: 'Фінляндія',
-            color: 'Коричневий з чорними та сірими вкрапленнями',
-            thickness: '20-30 мм',
-            format: 'Квадратний',
-            price: 'від 1200 грн/м²',
-          },
+        characteristics: {
+          origin: 'Фінляндія',
+          color: 'Коричневий з чорними та сірими вкрапленнями',
+          thickness: '20-30 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
         },
+        hit: true,
+      },
       {
         id: 'granite-verde-ubatuba',
         title: 'Verde Ubatuba',
-        image: new URL('../img/products/stone/granite-verde-ubatuba.jpeg', import.meta.url)
-          .href,
+        image: new URL(
+          '../img/products/stone/granite-verde-ubatuba.jpeg',
+          import.meta.url
+        ).href,
         description:
           'Цей граніт відомий своїм насиченим темно-зеленим кольором з дрібними золотистими вкрапленнями, що додають йому глибини. Часто використовується для стільниць, підвіконь та облицювання стін.',
-          characteristics: {
-            origin: 'Бразилія',
-            color: 'Темно-зелений з дрібними золотистими вкрапленнями',
-            thickness: '20-30 мм',
-            format: 'Квадратний',
-            price: 'від 1200 грн/м²',
-          },
+        characteristics: {
+          origin: 'Бразилія',
+          color: 'Темно-зелений з дрібними золотистими вкрапленнями',
+          thickness: '20-30 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: true,
       },
       {
         id: 'granite-black-galaxy',
         title: 'Black Galaxy',
-        image: new URL('../img/products/stone/granite-black-galaxy.jpg', import.meta.url)
-          .href,
+        image: new URL(
+          '../img/products/stone/granite-black-galaxy.jpg',
+          import.meta.url
+        ).href,
         description:
           'Цей граніт має глибокий чорний фон з дрібними золотистими та сріблястими вкрапленнями, що нагадують зоряне небо. Використовується для стільниць, підлог та декоративних елементів.',
-          characteristics: {
-            origin: 'Індія',
-            color: 'Чорний з золотистими та сріблястими вкрапленнями',
-            thickness: '20-30 мм',
-            format: 'Квадратний',
-            price: 'від 1200 грн/м²',
-          },
-        
+        characteristics: {
+          origin: 'Індія',
+          color: 'Чорний з золотистими та сріблястими вкрапленнями',
+          thickness: '20-30 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: true,
       },
     ],
   },
@@ -112,6 +144,7 @@ export const stoneTypes = {
           format: 'Квадратний',
           price: 'від 1200 грн/м²',
         },
+        hit: false,
       },
       {
         id: 'granite-ukraine-kapustyanskiy',
@@ -122,14 +155,15 @@ export const stoneTypes = {
         ).href,
         description:
           'Один із найміцніших і довговічних українських гранітів, має насичений червоний відтінок. Використовується для облицювання будівель, пам’ятників, плитки, сходів.',
-          characteristics: {
-            origin: 'Україна',
-            color: 'Червоний з чорними і сірими вкрапленнями',
-            thickness: '20-50 мм',
-            format: 'Квадратний',
-            price: 'від 1200 грн/м²',
-          },
+        characteristics: {
+          origin: 'Україна',
+          color: 'Червоний з чорними і сірими вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
         },
+        hit: false,
+      },
       {
         id: 'granite-ukraine-sofiivksy',
         title: 'Граніт "Софіївський"',
@@ -139,14 +173,15 @@ export const stoneTypes = {
         ).href,
         description:
           'Класичний граніт із рівномірною текстурою, чудово підходить для мощення, облицювання фасадів та внутрішніх приміщень. Дуже міцний і довговічний.',
-          characteristics: {
-            origin: 'Україна',
-            color: 'Світло-сірий із чорними вкрапленнями',
-            thickness: '20-50 мм',
-            format: 'Квадратний',
-            price: 'від 1200 грн/м²',
-          },
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
         },
+        hit: false,
+      },
     ],
   },
   onyx: {
@@ -159,33 +194,55 @@ export const stoneTypes = {
       {
         id: 'onyx-1',
         title: 'Онікс 1',
-        image: new URL('../img/products/stone/onyx.jpg', import.meta.url)
-          .href,
+        image: new URL('../img/products/stone/onyx.jpg', import.meta.url).href,
         description:
           'Онікс - це натуральний камінь, який має унікальну природну форму та характеристики.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: false,
       },
       {
         id: 'onyx-2',
         title: 'Онікс 2',
-        image: new URL('../img/products/stone/onyx.jpg', import.meta.url)
-          .href,
+        image: new URL('../img/products/stone/onyx.jpg', import.meta.url).href,
         description:
           'Онікс - це натуральний камінь, який має унікальну природну форму та характеристики.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: false,
       },
       {
         id: 'onyx-3',
         title: 'Онікс 3',
-        image: new URL('../img/products/stone/onyx.jpg', import.meta.url)
-          .href,
+        image: new URL('../img/products/stone/onyx.jpg', import.meta.url).href,
         description:
           'Онікс - це натуральний камінь, який має унікальну природну форму та характеристики.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: false,
       },
     ],
   },
   travertine: {
     id: 'travertine',
     title: 'Травертін',
-    image: new URL('../img/products/stone/travertine.jpg', import.meta.url).href,
+    image: new URL('../img/products/stone/travertine.jpg', import.meta.url)
+      .href,
     description:
       'Травертін - це натуральний камінь, який має унікальну природну форму та характеристики.',
     items: [
@@ -196,6 +253,14 @@ export const stoneTypes = {
           .href,
         description:
           'Травертін - це натуральний камінь, який має унікальну природну форму та характеристики.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: false,
       },
       {
         id: 'travertine-2',
@@ -204,6 +269,14 @@ export const stoneTypes = {
           .href,
         description:
           'Травертін - це натуральний камінь, який має унікальну природну форму та характеристики.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: false,
       },
       {
         id: 'travertine-3',
@@ -212,6 +285,14 @@ export const stoneTypes = {
           .href,
         description:
           'Травертін - це натуральний камінь, який має унікальну природну форму та характеристики.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: false,
       },
     ],
   },
@@ -229,6 +310,14 @@ export const stoneTypes = {
           .href,
         description:
           'Кварцит - це натуральний камінь, який має унікальну природну форму та характеристики.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: false,
       },
       {
         id: 'quartzite-2',
@@ -237,6 +326,14 @@ export const stoneTypes = {
           .href,
         description:
           'Кварцит - це натуральний камінь, який має унікальну природну форму та характеристики.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: false,
       },
       {
         id: 'quartzite-3',
@@ -245,6 +342,14 @@ export const stoneTypes = {
           .href,
         description:
           'Кварцит - це натуральний камінь, який має унікальну природну форму та характеристики.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: false,
       },
     ],
   },

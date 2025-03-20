@@ -5,6 +5,7 @@ import { initProducts } from './js/loader-products.js';
 import { generateBreadcrumbs } from './js/breadcrumbs.js';
 import { initHeroSlider } from './js/hero-slider.js';
 import { initSearch } from './js/search.js';
+import { initHits } from './js/hits-slider.js';
 import './css/breadcrumbs.css';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initStones();
   initProducts();
   initSearch();
+  initHits();
   
   // Ініціалізація хлібних крихт
   generateBreadcrumbs();
