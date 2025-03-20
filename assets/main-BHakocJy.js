@@ -96,7 +96,7 @@ import{S as b,N as L,P as y,A as $,E as S}from"./vendor-2krqkDcN.js";(function()
                         <div class="product-category-content">
                             <h3>${i.title}</h3>
                             <p>${i.description}</p>
-                            <a href="./products.html?category=${e}" class="category-link">Переглянути</a>
+                            <a href="./products.html?category=${e}" class="btn btn-primary">Переглянути</a>
                         </div>
                     </div>
                 `).join("")}
