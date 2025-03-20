@@ -39,7 +39,7 @@ function renderProductCatalog(category = null) {
                         <div class="product-category-content">
                             <h3>${value.title}</h3>
                             <p>${value.description}</p>
-                            <a href="./products.html?category=${key}" class="category-link">Переглянути</a>
+                            <a href="./products.html?category=${key}" class="btn btn-primary">Переглянути</a>
                         </div>
                     </div>
                 `).join('')}

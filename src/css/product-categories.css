@@ -58,6 +58,8 @@
 
 .product-category-content {
   padding: 20px;
+  display:flex;
+  flex-direction: column;
 }
 
 .product-category-content h3 {
