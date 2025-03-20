@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const galleryItems = document.querySelectorAll('.gallery-item');
   const lightbox = document.getElementById('portfolio-lightbox');
   const lightboxImage = document.getElementById('lightbox-image');
-  const lightboxCaption = document.getElementById('lightbox-caption');
   const closeBtn = document.querySelector('.lightbox-close');
   const prevBtn = document.querySelector('.lightbox-prev');
   const nextBtn = document.querySelector('.lightbox-next');
@@ -14,10 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
   function openLightbox(index) {
     const item = galleryItems[index];
     const imgSrc = item.querySelector('.gallery-image').src;
-    const caption = item.querySelector('.gallery-caption').textContent;
     
     lightboxImage.src = imgSrc;
-    lightboxCaption.textContent = caption;
     lightbox.style.display = 'flex';
     lightbox.classList.add('active');
     currentIndex = index;
@@ -27,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function closeLightbox() {
     lightbox.classList.remove('active');
     setTimeout(() => {
-      lightbox.style.display = 'none';
+      lightbox.style.display = 'none'; 
     }, 300); // Match the transition duration in CSS
   }
   
