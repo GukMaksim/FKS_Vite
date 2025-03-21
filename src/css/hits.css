@@ -1,6 +1,6 @@
 .hits-section {
     padding: 80px 0;
-    background-color: var(--light-bg-color);
+    background-color: var(--light-color);
 }
 
 .hits-header {
@@ -51,7 +51,7 @@
 
 .hit-card {
     flex: 0 0 calc(25% - 24px);
-    margin: 0 12px;
+    margin: 5px 12px;
     background: var(--light-color);
     border-radius: 8px;
     overflow: hidden;
@@ -85,7 +85,8 @@
 }
 
 .hit-info {
-    padding: 20px;
+    padding: 10px 20px;
+    text-align: center;
 }
 
 .hit-category {

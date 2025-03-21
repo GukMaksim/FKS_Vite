@@ -18,8 +18,9 @@
   "author": "Maksim Guk <maksim.guk@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "imask": "^7.6.1",
     "swiper": "^11.2.5",
     "vite-plugin-full-reload": "^1.2.0",
-    "vite-plugin-html-inject": "^1.1.2"    
+    "vite-plugin-html-inject": "^1.1.2"
   }
 }

@@ -1,0 +1,65 @@
+.consultation {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('../img/consultation-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+.consultation h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: white;
+}
+
+.consultation p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: white;
+  opacity: 0.9;
+}
+
+.consultation-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  max-width: 1000px;
+  margin: 0 auto 20px;
+}
+
+.consultation-form input {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.9);
+  min-width: 250px;
+  flex: 1;
+}
+
+.consultation-form button {
+  background-color: #ffc107;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  min-width: 250px;
+  flex: 1;
+}
+
+.consultation-form button:hover {
+  background-color: #e0a800;
+}
+
+@media (max-width: 768px) {
+  .consultation-form {
+    flex-direction: column;
+  }
+}

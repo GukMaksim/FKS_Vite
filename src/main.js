@@ -6,6 +6,7 @@ import { generateBreadcrumbs } from './js/breadcrumbs.js';
 import { initHeroSlider } from './js/hero-slider.js';
 import { initSearch } from './js/search.js';
 import { initHits } from './js/hits-slider.js';
+import { initPhoneMasks } from './js/input-mask.js';
 import './css/breadcrumbs.css';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -26,4 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Ініціалізація слайдера на головній сторінці
   initHeroSlider();
+  
+  // Ініціалізація масок для телефонних полів
+  initPhoneMasks();
 });

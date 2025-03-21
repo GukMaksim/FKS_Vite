@@ -1,0 +1,136 @@
+.stages {
+  padding: 60px 0;
+  text-align: center;
+  background-color: #fff;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #2c2c2c;
+}
+
+.stages-description {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stages-flow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.stage-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 160px;
+}
+
+.stage-icon {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  border: 2px solid #f0d78c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stage-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #f0d78c;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #2c2c2c;
+  font-size: 16px;
+}
+
+.stage-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.stage-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: #2c2c2c;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.stage-subtitle {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+
+.stage-arrow {
+  display: flex;
+  align-items: center;
+  color: #f0d78c;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 2% 5px 10%;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 28px;
+  }
+  
+  .stages-description {
+    font-size: 16px;
+  }
+  
+  .stage-icon {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .stage-img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 425px) {
+    .stages-flow {
+      flex-direction: column;
+      gap: 0;
+    }
+    
+    .stage-arrow {
+      transform: rotate(90deg);
+      margin: 0;
+    }
+
+    .stage-icon {
+        margin-bottom: 0;
+    }
+
+    .stage-title {
+        margin-bottom: 0;
+    }
+  }
