@@ -106,6 +106,9 @@
 }
 
 .stone-variant-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   background: #fff;
   border-radius: 8px;
   overflow: hidden;
@@ -126,23 +129,36 @@
 
 .stone-variant-info {
   padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* height: 100%; */
+  flex-grow: 1;
 }
 
 .stone-variant-info h4 {
+  margin: 0 0 10px;
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 8px;
-  color: #2c2c2c;
-  text-align: center;
+  color: var(--dark-color);
 }
 
 .stone-variant-info p {
-  font-size: 14px;
-  line-height: 1.4;
-  color: #666;
+  margin: 0;
+  font-weight: 500;
+  color: var(--accent-color);
+  margin-top: auto;
 }
 
 /* Individual Stone Item Styles */
+.stone-variant-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 .stone-characteristics {
   margin-top: 25px;
   background-color: #f9f9f9;

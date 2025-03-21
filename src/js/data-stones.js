@@ -129,10 +129,10 @@ export const stoneTypes = {
       'Граніт України - це натуральний камінь з України, який має унікальну природну форму та характеристики.',
     items: [
       {
-        id: 'granite-ukraine-labradoryt',
-        title: 'Граніт "Лабрадорит"',
+        id: 'granite-ukraine-tanskyi',
+        title: 'Граніт "Танський"',
         image: new URL(
-          '../img/products/stone/granite-ukraine-labradoryt.jpg',
+          '../img/products/stone/granite-ukraine-tanskyi.jpg',
           import.meta.url
         ).href,
         description:
@@ -147,10 +147,10 @@ export const stoneTypes = {
         hit: false,
       },
       {
-        id: 'granite-ukraine-kapustyanskiy',
-        title: 'Граніт "Капустянський"',
+        id: 'granite-ukraine-pivnichni_osnyky',
+        title: 'Граніт "Північні осники"',
         image: new URL(
-          '../img/products/stone/granite-ukraine-kapustyanskiy.jpg',
+          '../img/products/stone/granite-ukraine-pivnichni_osnyky.jpg',
           import.meta.url
         ).href,
         description:
@@ -165,10 +165,244 @@ export const stoneTypes = {
         hit: false,
       },
       {
-        id: 'granite-ukraine-sofiivksy',
-        title: 'Граніт "Софіївський"',
+        id: 'granite-ukraine-kapustyanskiy',
+        title: 'Граніт "Капустинський"',
         image: new URL(
-          '../img/products/stone/granite-ukraine-sofiivksy.jpg',
+          '../img/products/stone/granite-ukraine-kapustyanskiy.jpg',
+          import.meta.url
+        ).href,
+        description:
+          'Класичний граніт із рівномірною текстурою, чудово підходить для мощення, облицювання фасадів та внутрішніх приміщень. Дуже міцний і довговічний.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: false,
+      },
+      {
+        id: 'granite-ukraine-pokostovka',
+        title: 'Граніт "Покостовка"',
+        image: new URL(
+          '../img/products/stone/granite-ukraine-pokostovka.jpg',
+          import.meta.url
+        ).href,
+        description:
+          'Класичний граніт із рівномірною текстурою, чудово підходить для мощення, облицювання фасадів та внутрішніх приміщень. Дуже міцний і довговічний.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: false,
+      },
+      {
+        id: 'granite-ukraine-didkovychy-kornynskyi',
+        title: 'Граніт "Дідковичі"',
+        image: new URL(
+          '../img/products/stone/granite-ukraine-didkovychy.jpg',
+          import.meta.url
+        ).href,
+        description:
+          'Класичний граніт із рівномірною текстурою, чудово підходить для мощення, облицювання фасадів та внутрішніх приміщень. Дуже міцний і довговічний.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: false,
+      },
+      {
+        id: 'granite-ukraine-kornynskyi',
+        title: 'Граніт "Корнинський"',
+        image: new URL(
+          '../img/products/stone/granite-ukraine-kornynskyi.jpg',
+          import.meta.url
+        ).href,
+        description:
+          'Класичний граніт із рівномірною текстурою, чудово підходить для мощення, облицювання фасадів та внутрішніх приміщень. Дуже міцний і довговічний.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: false,
+      },
+      {
+        id: 'granite-ukraine-vasylivskyi',
+        title: 'Граніт "Василівський"',
+        image: new URL(
+          '../img/products/stone/granite-ukraine-vasylivskyi.jpg',
+          import.meta.url
+        ).href,
+        description:
+          'Класичний граніт із рівномірною текстурою, чудово підходить для мощення, облицювання фасадів та внутрішніх приміщень. Дуже міцний і довговічний.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: false,
+      },
+      {
+        id: 'granite-ukraine-chelnovskyi',
+        title: 'Граніт "Челновський"',
+        image: new URL(
+          '../img/products/stone/granite-ukraine-chelnovskyi.jpg',
+          import.meta.url
+        ).href,
+        description:
+          'Класичний граніт із рівномірною текстурою, чудово підходить для мощення, облицювання фасадів та внутрішніх приміщень. Дуже міцний і довговічний.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: false,
+      },
+      {
+        id: 'granite-ukraine-omelyanovskyi',
+        title: 'Граніт "Омеляновський"',
+        image: new URL(
+          '../img/products/stone/granite-ukraine-omelyanovskyi.jpg',
+          import.meta.url
+        ).href,
+        description:
+          'Класичний граніт із рівномірною текстурою, чудово підходить для мощення, облицювання фасадів та внутрішніх приміщень. Дуже міцний і довговічний.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: false,
+      },
+      {
+        id: 'granite-ukraine-tokivskyi',
+        title: 'Граніт "Токівський"',
+        image: new URL(
+          '../img/products/stone/granite-ukraine-tokivskyi.jpg',
+          import.meta.url
+        ).href,
+        description:
+          'Класичний граніт із рівномірною текстурою, чудово підходить для мощення, облицювання фасадів та внутрішніх приміщень. Дуже міцний і довговічний.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: false,
+      },
+      {
+        id: 'granite-ukraine-zhadivskyi',
+        title: 'Граніт "Жадівський"',
+        image: new URL(
+          '../img/products/stone/granite-ukraine-zhadivskyi.jpg',
+          import.meta.url
+        ).href,
+        description:
+          'Класичний граніт із рівномірною текстурою, чудово підходить для мощення, облицювання фасадів та внутрішніх приміщень. Дуже міцний і довговічний.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: false,
+      },
+      {
+        id: 'granite-ukraine-leznyky',
+        title: 'Граніт "Лезники"',
+        image: new URL(
+          '../img/products/stone/granite-ukraine-leznyky.jpg',
+          import.meta.url
+        ).href,
+        description:
+          'Класичний граніт із рівномірною текстурою, чудово підходить для мощення, облицювання фасадів та внутрішніх приміщень. Дуже міцний і довговічний.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: false,
+      },
+      {
+        id: 'granite-ukraine-novoselivka',
+        title: 'Граніт "Новоселівка"',
+        image: new URL(
+          '../img/products/stone/granite-ukraine-novoselivka.jpg',
+          import.meta.url
+        ).href,
+        description:
+          'Класичний граніт із рівномірною текстурою, чудово підходить для мощення, облицювання фасадів та внутрішніх приміщень. Дуже міцний і довговічний.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: false,
+      },
+      {
+        id: 'granite-ukraine-starobabanskyi',
+        title: 'Граніт "Старобабанський"',
+        image: new URL(
+          '../img/products/stone/granite-ukraine-starobabanskyi.jpg',
+          import.meta.url
+        ).href,
+        description:
+          'Класичний граніт із рівномірною текстурою, чудово підходить для мощення, облицювання фасадів та внутрішніх приміщень. Дуже міцний і довговічний.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: false,
+      },
+      {
+        id: 'granite-ukraine-bukynskyi',
+        title: 'Граніт "Букинський"',
+        image: new URL(
+          '../img/products/stone/granite-ukraine-bukynskyi.jpg',
+          import.meta.url
+        ).href,
+        description:
+          'Класичний граніт із рівномірною текстурою, чудово підходить для мощення, облицювання фасадів та внутрішніх приміщень. Дуже міцний і довговічний.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: false,
+      },
+      {
+        id: 'granite-ukraine-krupskyi',
+        title: 'Граніт "Крупський"',
+        image: new URL(
+          '../img/products/stone/granite-ukraine-krupskyi.jpg',
           import.meta.url
         ).href,
         description:

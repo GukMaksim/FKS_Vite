@@ -41,6 +41,7 @@ function renderStoneCatalog(type = null, item = null) {
                             </div>
                             <div class="stone-variant-info">
                                 <h4>${item.title}</h4>
+                                <p>${item.characteristics.price}</p>
                             </div>
                         </a>
                     </div>
