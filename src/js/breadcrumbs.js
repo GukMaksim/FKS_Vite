@@ -117,7 +117,7 @@ function addSpecificBreadcrumb(breadcrumbsList, pageName, search) {
       'quartzite': 'Кварцит',
       'travertine': 'Травертин',
       'onyx': 'Онікс',
-      'sandstone': 'Піщаник'
+      'sandstone': 'Піщаник',
     };
     
     label = stoneLabels[param] || param;
