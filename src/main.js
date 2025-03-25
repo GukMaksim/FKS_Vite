@@ -7,27 +7,18 @@ import { initHeroSlider } from './js/hero-slider.js';
 import { initSearch } from './js/search.js';
 import { initHits } from './js/hits-slider.js';
 import { initPhoneMasks } from './js/input-mask.js';
+import { setBaseOpenGraphTags } from './js/meta-tags.js';
 import './css/breadcrumbs.css';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Ініціалізація мобільного меню
+  setBaseOpenGraphTags();
   initMobileMenu();
-  
-  // Встановлення активної сторінки в меню
   setActivePage();
-  
-  // Ініціалізація каталогів
   initStones();
   initProducts();
   initSearch();
   initHits();
-  
-  // Ініціалізація хлібних крихт
   generateBreadcrumbs();
-  
-  // Ініціалізація слайдера на головній сторінці
   initHeroSlider();
-  
-  // Ініціалізація масок для телефонних полів
   initPhoneMasks();
 });

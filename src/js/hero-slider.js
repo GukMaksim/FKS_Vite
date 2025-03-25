@@ -1,8 +1,6 @@
-// Hero slider functionality using Swiper.js
 import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -13,7 +11,7 @@ export function initHeroSlider() {
     modules: [Navigation, Pagination, Autoplay, EffectFade],
     effect: 'fade',
     fadeEffect: {
-      crossFade: true
+      crossFade: true,
     },
     loop: true,
     speed: 1000,

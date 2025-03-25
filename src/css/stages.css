@@ -99,16 +99,16 @@
   .section-title {
     font-size: 28px;
   }
-  
+
   .stages-description {
     font-size: 16px;
   }
-  
+
   .stage-icon {
     width: 80px;
     height: 80px;
   }
-  
+
   .stage-img {
     width: 40px;
     height: 40px;
@@ -116,21 +116,21 @@
 }
 
 @media (max-width: 425px) {
-    .stages-flow {
-      flex-direction: column;
-      gap: 0;
-    }
-    
-    .stage-arrow {
-      transform: rotate(90deg);
-      margin: 0;
-    }
-
-    .stage-icon {
-        margin-bottom: 0;
-    }
-
-    .stage-title {
-        margin-bottom: 0;
-    }
+  .stages-flow {
+    flex-direction: column;
+    gap: 0;
   }
+
+  .stage-arrow {
+    transform: rotate(90deg);
+    margin: 0;
+  }
+
+  .stage-icon {
+    margin-bottom: 0;
+  }
+
+  .stage-title {
+    margin-bottom: 0;
+  }
+}

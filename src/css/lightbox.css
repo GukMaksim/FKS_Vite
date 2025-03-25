@@ -31,7 +31,6 @@
   transform: scale(1);
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
   .portfolio-lightbox img {
     max-width: 95%;

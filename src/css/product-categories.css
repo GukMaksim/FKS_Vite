@@ -58,7 +58,7 @@
 
 .product-category-content {
   padding: 20px;
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
 
@@ -76,7 +76,6 @@
   margin-bottom: 20px;
 }
 
-/* Product Category Details Styles */
 .product-category-details {
   max-width: 1200px;
   margin: 0 auto;
@@ -149,6 +148,6 @@
 
 @media screen and (max-width: 768px) {
   .product-categories {
-   padding: 20px 0;
+    padding: 20px 0;
   }
 }

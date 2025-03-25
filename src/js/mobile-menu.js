@@ -7,10 +7,10 @@ export function initMobileMenu() {
 
   menuButton.addEventListener('click', toggleMenu);
 
-  // Close menu on click outside
   document.addEventListener('click', e => {
-    const isClickInside = mobileMenu.contains(e.target) || menuButton.contains(e.target);
-    
+    const isClickInside =
+      mobileMenu.contains(e.target) || menuButton.contains(e.target);
+
     if (!isClickInside && mobileMenu.classList.contains('is-open')) {
       closeMenu();
     }

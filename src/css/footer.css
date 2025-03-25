@@ -108,7 +108,6 @@
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* Tablet styles */
 @media screen and (max-width: 1199px) {
   .footer-container {
     grid-template-columns: repeat(2, 1fr);
@@ -116,11 +115,9 @@
   }
 }
 
-/* Mobile styles */
 @media screen and (max-width: 767px) {
   .footer-container {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 }
-

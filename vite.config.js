@@ -3,9 +3,7 @@ import { glob } from 'glob';
 import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 import SortCss from 'postcss-sort-media-queries';
-
-// Add imagemin plugin for Vite
-import imagemin from 'vite-plugin-imagemin'
+import imagemin from 'vite-plugin-imagemin';
 
 export default defineConfig(({ command }) => {
   return {

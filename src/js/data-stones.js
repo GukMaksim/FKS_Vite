@@ -1,19 +1,15 @@
-// Дані для каталогу каменю
 export const stoneTypes = {
   marble: {
     id: 'marble',
     title: 'Мармур',
     image: new URL('../img/products/stone/marble.jpg', import.meta.url).href,
-    description:
-      'Мармур - це елегантний натуральний камінь, що формується протягом мільйонів років під впливом високих температур і тиску.',
+    description: 'Мармур - це елегантний натуральний камінь, що формується протягом мільйонів років під впливом високих температур і тиску.',
     items: [
       {
         id: 'marble-1',
         title: 'Мармур 1',
-        image: new URL('../img/products/stone/marble-1.jpg', import.meta.url)
-          .href,
-        description:
-          'Мармур - це натуральний камінь, який має унікальну природну форму та характеристики.',
+        image: new URL('../img/products/stone/marble-1.jpg', import.meta.url).href,
+        description: 'Мармур - це натуральний камінь, який має унікальну природну форму та характеристики.',
         characteristics: {
           origin: 'Україна',
           color: 'Світло-сірий із чорними вкрапленнями',
@@ -26,10 +22,8 @@ export const stoneTypes = {
       {
         id: 'marble-2',
         title: 'Мармур 2',
-        image: new URL('../img/products/stone/marble-2.jpg', import.meta.url)
-          .href,
-        description:
-          'Мармур - це натуральний камінь, який має унікальну природну форму та характеристики.',
+        image: new URL('../img/products/stone/marble-2.jpg', import.meta.url).href,
+        description: 'Мармур - це натуральний камінь, який має унікальну природну форму та характеристики.',
         characteristics: {
           origin: 'Україна',
           color: 'Світло-сірий із чорними вкрапленнями',
@@ -42,10 +36,8 @@ export const stoneTypes = {
       {
         id: 'marble-3',
         title: 'Мармур 3',
-        image: new URL('../img/products/stone/marble-3.jpg', import.meta.url)
-          .href,
-        description:
-          'Мармур - це натуральний камінь, який має унікальну природну форму та характеристики.',
+        image: new URL('../img/products/stone/marble-3.jpg', import.meta.url).href,
+        description: 'Мармур - це натуральний камінь, який має унікальну природну форму та характеристики.',
         characteristics: {
           origin: 'Україна',
           color: 'Світло-сірий із чорними вкрапленнями',
@@ -61,18 +53,13 @@ export const stoneTypes = {
     id: 'granite',
     title: 'Граніт',
     image: new URL('../img/products/stone/granite.jpg', import.meta.url).href,
-    description:
-      'Граніт - це природний камінь, який має глибокий та насичений зовнішній вигляд. Він має різні види та кольори, які відповідають різним природним властивостям та етапам розвитку.',
+    description: 'Граніт - це природний камінь, який має глибокий та насичений зовнішній вигляд. Він має різні види та кольори, які відповідають різним природним властивостям та етапам розвитку.',
     items: [
       {
         id: 'granite-baltic-brown',
         title: 'Baltic Brown',
-        image: new URL(
-          '../img/products/stone/granite-baltic-brown.jpg',
-          import.meta.url
-        ).href,
-        description:
-          'Цей граніт має теплий коричневий відтінок з характерними круглими візерунками, що надають йому унікального вигляду. Використовується для стільниць, підлогових покриттів та облицювання.',
+        image: new URL('../img/products/stone/granite-baltic-brown.jpg',import.meta.url).href,
+        description: 'Цей граніт має теплий коричневий відтінок з характерними круглими візерунками, що надають йому унікального вигляду. Використовується для стільниць, підлогових покриттів та облицювання.',
         characteristics: {
           origin: 'Фінляндія',
           color: 'Коричневий з чорними та сірими вкрапленнями',
@@ -85,12 +72,8 @@ export const stoneTypes = {
       {
         id: 'granite-verde-ubatuba',
         title: 'Verde Ubatuba',
-        image: new URL(
-          '../img/products/stone/granite-verde-ubatuba.jpeg',
-          import.meta.url
-        ).href,
-        description:
-          'Цей граніт відомий своїм насиченим темно-зеленим кольором з дрібними золотистими вкрапленнями, що додають йому глибини. Часто використовується для стільниць, підвіконь та облицювання стін.',
+        image: new URL('../img/products/stone/granite-verde-ubatuba.jpeg',import.meta.url).href,
+        description: 'Цей граніт відомий своїм насиченим темно-зеленим кольором з дрібними золотистими вкрапленнями, що додають йому глибини. Часто використовується для стільниць, підвіконь та облицювання стін.',
         characteristics: {
           origin: 'Бразилія',
           color: 'Темно-зелений з дрібними золотистими вкрапленнями',
@@ -103,12 +86,8 @@ export const stoneTypes = {
       {
         id: 'granite-black-galaxy',
         title: 'Black Galaxy',
-        image: new URL(
-          '../img/products/stone/granite-black-galaxy.jpg',
-          import.meta.url
-        ).href,
-        description:
-          'Цей граніт має глибокий чорний фон з дрібними золотистими та сріблястими вкрапленнями, що нагадують зоряне небо. Використовується для стільниць, підлог та декоративних елементів.',
+        image: new URL('../img/products/stone/granite-black-galaxy.jpg',import.meta.url).href,
+        description: 'Цей граніт має глибокий чорний фон з дрібними золотистими та сріблястими вкрапленнями, що нагадують зоряне небо. Використовується для стільниць, підлог та декоративних елементів.',
         characteristics: {
           origin: 'Індія',
           color: 'Чорний з золотистими та сріблястими вкрапленнями',
@@ -153,8 +132,7 @@ export const stoneTypes = {
           '../img/products/stone/granite-ukraine-pivnichni_osnyky.jpg',
           import.meta.url
         ).href,
-        description:
-          'інформація про цей граніт обмежена',
+        description: 'інформація про цей граніт обмежена',
         characteristics: {
           origin: 'Україна',
           color: 'немає даних',
@@ -207,8 +185,7 @@ export const stoneTypes = {
           '../img/products/stone/granite-ukraine-didkovychy.jpg',
           import.meta.url
         ).href,
-        description:
-          'інформація про цей граніт обмежена',
+        description: 'інформація про цей граніт обмежена',
         characteristics: {
           origin: 'Україна',
           color: 'немає даних',
@@ -225,8 +202,7 @@ export const stoneTypes = {
           '../img/products/stone/granite-ukraine-kornynskyi.jpg',
           import.meta.url
         ).href,
-        description:
-          'інформація про цей граніт обмежена.',
+        description: 'інформація про цей граніт обмежена.',
         characteristics: {
           origin: 'Україна',
           color: 'немає даних',
@@ -243,8 +219,7 @@ export const stoneTypes = {
           '../img/products/stone/granite-ukraine-vasylivskyi.jpg',
           import.meta.url
         ).href,
-        description:
-          'інформація про цей граніт обмежена.',
+        description: 'інформація про цей граніт обмежена.',
         characteristics: {
           origin: 'Україна',
           color: 'немає даних',
@@ -261,8 +236,7 @@ export const stoneTypes = {
           '../img/products/stone/granite-ukraine-chelnovskyi.jpg',
           import.meta.url
         ).href,
-        description:
-          'інформація про цей граніт обмежена.',
+        description: 'інформація про цей граніт обмежена.',
         characteristics: {
           origin: 'Україна',
           color: 'немає даних',
@@ -279,8 +253,7 @@ export const stoneTypes = {
           '../img/products/stone/granite-ukraine-omelyanovskyi.jpg',
           import.meta.url
         ).href,
-        description:
-          'інформація про цей граніт обмежена.',
+        description: 'інформація про цей граніт обмежена.',
         characteristics: {
           origin: 'Україна',
           color: 'немає даних',
@@ -591,16 +564,14 @@ export const stoneTypes = {
     id: 'slabs',
     title: 'Слеби',
     image: new URL('../img/products/stone/slabs.jpg', import.meta.url).href,
-    description:
-      'Слеби.',
+    description: 'Слеби.',
     items: [
       {
         id: 'slabs-1',
         title: 'Слеби 1',
         image: new URL('../img/products/stone/slabs-1.jpg', import.meta.url)
           .href,
-        description:
-          'Слеби.',
+        description: 'Слеби.',
         characteristics: {
           origin: 'Україна',
           color: 'Світло-сірий із чорними вкрапленнями',
@@ -615,8 +586,7 @@ export const stoneTypes = {
         title: 'Слеби 2',
         image: new URL('../img/products/stone/slabs-2.jpg', import.meta.url)
           .href,
-        description:
-          'Слеби.',
+        description: 'Слеби.',
         characteristics: {
           origin: 'Україна',
           color: 'Світло-сірий із чорними вкрапленнями',
@@ -631,8 +601,7 @@ export const stoneTypes = {
         title: 'Слеби 3',
         image: new URL('../img/products/stone/slabs-3.jpg', import.meta.url)
           .href,
-        description:
-          'Слеби.',
+        description: 'Слеби.',
         characteristics: {
           origin: 'Україна',
           color: 'Світло-сірий із чорними вкрапленнями',
@@ -647,8 +616,7 @@ export const stoneTypes = {
         title: 'Слеби 4',
         image: new URL('../img/products/stone/slabs-4.jpg', import.meta.url)
           .href,
-        description:
-          'Слеби.',
+        description: 'Слеби.',
         characteristics: {
           origin: 'Україна',
           color: 'Світло-сірий із чорними вкрапленнями',
