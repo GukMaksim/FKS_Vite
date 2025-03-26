@@ -1,22 +1,7 @@
-import { stoneTypes } from './data-stones.js';
+import { StoneCatalog } from './stone-catalog.js';
 
-function getHitProducts() {
-  const hits = [];
-
-  Object.entries(stoneTypes).forEach(([type, category]) => {
-    category.items.forEach(item => {
-      if (item.hit) {
-        hits.push({
-          ...item,
-          type,
-          category: category.title,
-        });
-      }
-    });
-  });
-
-  return hits;
-}
+// Створюємо екземпляр каталогу каменю для отримання хітів продажів
+const stoneCatalog = new StoneCatalog();
 
 function renderHitCards(hits) {
   const track = document.querySelector('.hits-track');
@@ -93,7 +78,10 @@ function initSlider() {
 }
 
 export function initHits() {
-  const hits = getHitProducts();
-  renderHitCards(hits);
-  initSlider();
+  const hits = stoneCatalog.getHitProducts();
+  
+  if (hits.length > 0) {
+    renderHitCards(hits);
+    initSlider();
+  }
 }

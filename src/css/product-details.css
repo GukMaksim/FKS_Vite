@@ -1,0 +1,107 @@
+.product-main-content {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.product-item-image-big {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.product-description-container {
+    flex: 0 0 45%;
+    max-width: 45%;
+}
+
+.product-gallery-section {
+    margin-top: 40px;
+}
+
+.product-gallery-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+/* Product Lightbox Styles */
+.product-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.product-lightbox.active {
+    opacity: 1;
+}
+
+.product-lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.product-lightbox.active img {
+    transform: scale(1);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.lightbox-nav {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+.lightbox-prev,
+.lightbox-next {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10000;
+}
+
+@media (max-width: 768px) {
+    .product-main-content {
+        flex-direction: column;
+    }
+    
+    .product-item-image-big,
+    .product-description-container {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .product-lightbox img {
+        max-width: 95%;
+        max-height: 95%;
+    }
+}
