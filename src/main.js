@@ -8,7 +8,7 @@ import { initSearch } from './js/search.js';
 import { initHits } from './js/hits-slider.js';
 import { initPhoneMasks } from './js/input-mask.js';
 import { setBaseOpenGraphTags } from './js/meta-tags.js';
-import './js/about-animations.js';
+import './js/animations.js';
 import './css/breadcrumbs.css';
 
 document.addEventListener('DOMContentLoaded', () => {
