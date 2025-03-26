@@ -29,11 +29,16 @@
 
     <main>
       <section class="about">
+        <div class="about-hero-section">
+          <div class="about-hero-overlay">
+            <h1 class="about-hero-title">Про компанію</h1>
+          </div>
+        </div>
         <div class="container about-container">
-          <h1 class="section-title">Про компанію</h1>
+          <!-- Заголовок вже є в hero-секції -->
 
           <div class="about-content">
-            <div class="about-section">
+            <div class="about-section animate-on-scroll">
               <h2 class="about-subtitle">Наша історія</h2>
               <p class="about-text">
                 ТОВ «ФКС» - це провідна українська компанія з виробництва
@@ -57,7 +62,7 @@
               </div>
             </div>
 
-            <div class="about-section">
+            <div class="about-section animate-on-scroll">
               <h2 class="about-subtitle">Наша місія</h2>
               <p class="about-text">
                 Наша місія - створювати вироби з природного каменю найвищої
@@ -70,11 +75,14 @@
               </p>
             </div>
 
-            <div class="about-section">
+            <div class="about-section values-section animate-on-scroll">
               <h2 class="about-subtitle">Наші цінності</h2>
 
               <div class="about-values">
                 <div class="value-item">
+                  <div class="value-icon">
+                    <img src="./img/icon-quality.svg" alt="Іконка якості" width="64" height="64">
+                  </div>
                   <h3 class="value-title">Якість</h3>
                   <p class="value-text">
                     Ми використовуємо тільки найкращі матеріали та сучасне
@@ -84,6 +92,9 @@
                 </div>
 
                 <div class="value-item">
+                  <div class="value-icon">
+                    <img src="./img/icon-innovation.svg" alt="Іконка інновацій" width="64" height="64">
+                  </div>
                   <h3 class="value-title">Інновації</h3>
                   <p class="value-text">
                     Постійно вдосконалюємо технології обробки каменю,
@@ -92,6 +103,9 @@
                 </div>
 
                 <div class="value-item">
+                  <div class="value-icon">
+                    <img src="./img/icon-eco.svg" alt="Іконка екологічності" width="64" height="64">
+                  </div>
                   <h3 class="value-title">Екологічність</h3>
                   <p class="value-text">
                     Дбаємо про навколишнє середовище, використовуючи безпечні
@@ -101,7 +115,7 @@
               </div>
             </div>
 
-            <div class="about-section">
+            <div class="about-section animate-on-scroll">
               <h2 class="about-subtitle">Наша команда</h2>
               <p class="about-text">
                 Наша команда складається з досвідчених фахівців - від майстрів з
@@ -116,7 +130,7 @@
               </p>
             </div>
 
-            <div class="about-section">
+            <div class="about-section animate-on-scroll">
               <h2 class="about-subtitle">Наші переваги</h2>
               <p class="about-text">Обираючи ТОВ «ФКС», ви отримуєте:</p>
               <ul class="about-list">
@@ -142,5 +156,6 @@
 
     <load src="./partials/footer.html" />
     <script type="module" src="./main.js"></script>
+    <script type="module" src="./js/about-animations.js"></script>
   </body>
 </html>

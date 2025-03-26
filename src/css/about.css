@@ -1,14 +1,48 @@
 .about {
-  padding: 40px 0;
+  padding: 0 0 60px 0;
 }
 
 .about-part {
-  background-color: antiquewhite;
+  background-color: var(--light-color);
 }
 
 .about-container {
   max-width: 1200px;
   margin: 0 auto;
+  padding-top: 40px;
+}
+
+.about-hero-section {
+  height: 400px;
+  background-image: url('../img/hero-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .about-title {
@@ -63,10 +97,23 @@
 
 .value-item {
   flex: 1 1 300px;
-  padding: 20px;
+  padding: 30px;
   background-color: var(--light-color);
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.value-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.value-icon {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
 }
 
 .value-title {
@@ -81,6 +128,48 @@
   line-height: 1.5;
 }
 
+.about-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.about-list-item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.about-list-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+}
+
+.values-section {
+  padding: 40px 0;
+  background-color: rgba(193, 154, 107, 0.05);
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media screen and (max-width: 768px) {
   .about {
     padding: 20px 0;
@@ -93,5 +182,17 @@
 
   .about-subtitle {
     font-size: 20px;
+  }
+  
+  .about-hero-section {
+    height: 300px;
+  }
+  
+  .about-hero-title {
+    font-size: 36px;
+  }
+  
+  .about-values {
+    flex-direction: column;
   }
 }

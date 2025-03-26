@@ -16,3 +16,216 @@
     transform: translateX(-50%) translateY(100%) scale(1);
   }
 }
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide In Left Animation */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide In Right Animation */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scale Up Animation */
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Rotate Animation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Animate on scroll classes */
+.animate-on-scroll {
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.slide-up.visible {
+  animation: slideUp 0.8s ease forwards;
+}
+
+.slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.slide-left.visible {
+  animation: slideInLeft 0.8s ease forwards;
+}
+
+.slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+.slide-right.visible {
+  animation: slideInRight 0.8s ease forwards;
+}
+
+.scale-up {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.scale-up.visible {
+  animation: scaleUp 0.8s ease forwards;
+}
+
+/* Staggered animations */
+.stagger-item {
+  opacity: 0;
+}
+
+.stagger-item.visible {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Delay utilities */
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+/* Continuous animations */
+.pulse {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.rotate {
+  animation: rotate 8s linear infinite;
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+/* Hover animations */
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Parallax effect */
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
