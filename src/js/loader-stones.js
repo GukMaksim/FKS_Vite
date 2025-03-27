@@ -9,10 +9,10 @@ function renderStoneCatalog(type = null, item = null) {
     renderItemDetails: (stoneItem, stoneType, type) => `
             <h1 class="section-title">${stoneItem.title}</h1>
             <div class="stone-type-details">
-                <div class="stone-type-image-big">
+                <div class="card-image-big">
                     <img src="${stoneItem.image}" alt="${stoneItem.title}" />
                 </div>
-                <div class="stone-type-info">
+                <div class="card-info">
                     <p class="stone-type-description">${
                       stoneItem.description
                     }</p>
@@ -66,11 +66,11 @@ function renderStoneCatalog(type = null, item = null) {
                 ${Object.entries(stoneTypes)
                   .map(
                     ([key, value]) => `
-                    <div class="stone-type-card">
-                        <div class="stone-type-image">
+                    <div class="card">
+                        <div class="card-image">
                             <img src="${value.image}" alt="${value.title}" />
                         </div>
-                        <div class="stone-type-info">
+                        <div class="card-info">
                             <h3>${value.title}</h3>
                             <p>${value.description}</p>
                             <a href="./stones.html?type=${key}" class="btn btn-primary">Переглянути</a>
@@ -90,11 +90,11 @@ function renderStoneCatalog(type = null, item = null) {
 function renderMainPageStoneCatalog() {
   const options = {
     renderMainPageItem: (value, key) => `
-            <div class="stone-type-card">
-                <div class="stone-type-image">
+            <div class="card">
+                <div class="card-image">
                     <img src="${value.image}" alt="${value.title}" loading="lazy" />
                 </div>
-                <div class="stone-type-info">
+                <div class="card-info">
                     <h3>${value.title}</h3>
                     <p>${value.description}</p>
                     <a href="./stones.html?type=${key}" class="btn btn-secondary">Переглянути</a>

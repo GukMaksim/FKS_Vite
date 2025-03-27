@@ -67,7 +67,7 @@ function renderProductCatalog(category = null, item = null) {
             </div>
         `,
     renderCategory: (productCategory, type) => `
-            <h2>${productCategory.title}</h2>
+            <h2 class="section-title">${productCategory.title}</h2>
             <div class="product-category-details">
                 <div class="product-category-info">
                     <p class="product-category-description">${
@@ -104,12 +104,12 @@ function renderProductCatalog(category = null, item = null) {
                 ${Object.entries(productCategories)
                   .map(
                     ([key, value]) => `
-                    <div class="product-category-card">
-                        <div class="product-category-image">
+                    <div class="card">
+                        <div class="card-image">
                             <img src="${value.image}" alt="${value.title}" loading="lazy">
                         </div>
-                        <div class="product-category-content">
-                            <h3>${value.title}</h3>
+                        <div class="card-info">
+                            <h3 class="products-title">${value.title}</h3>
                             <p>${value.description}</p>
                             <a href="./products.html?category=${key}" class="btn btn-primary">Переглянути</a>
                         </div>

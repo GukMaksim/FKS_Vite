@@ -1,4 +1,4 @@
-.portfolio-lightbox {
+.lightbox {
   position: fixed;
   top: 0;
   left: 0;
@@ -14,11 +14,11 @@
   cursor: pointer;
 }
 
-.portfolio-lightbox.active {
+.lightbox.active {
   opacity: 1;
 }
 
-.portfolio-lightbox img {
+.lightbox img {
   max-width: 90%;
   max-height: 90%;
   object-fit: contain;
@@ -27,12 +27,12 @@
   transition: transform 0.3s ease;
 }
 
-.portfolio-lightbox.active img {
+.lightbox.active img {
   transform: scale(1);
 }
 
 @media (max-width: 768px) {
-  .portfolio-lightbox img {
+  .lightbox img {
     max-width: 95%;
     max-height: 95%;
   }
