@@ -47,6 +47,51 @@ export const stoneTypes = {
         },
         hit: false,
       },
+      {
+        id: 'marble-slabs-1',
+        title: 'Слеби з мармуру',
+        image: new URL('../img/products/stone/marble-slabs-1.jpg', import.meta.url)
+          .href,
+        description: 'Слеби.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: true,
+      },
+      {
+        id: 'marble-slabs-2',
+        title: 'Слеби з мармуру',
+        image: new URL('../img/products/stone/marble-slabs-2.jpg', import.meta.url)
+          .href,
+        description: 'Слеби.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: true,
+      },
+      {
+        id: 'marble-slabs-3',
+        title: 'Слеби з мармуру',
+        image: new URL('../img/products/stone/marble-slabs-3.jpg', import.meta.url)
+          .href,
+        description: 'Слеби.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: true,
+      },
     ],
   },
   granite: {
@@ -96,6 +141,36 @@ export const stoneTypes = {
           price: 'від 1200 грн/м²',
         },
         hit: false,
+      },
+      {
+        id: 'granite-slabs-1',
+        title: 'Слеби з граніту',
+        image: new URL('../img/products/stone/granite-slabs-1.jpg', import.meta.url)
+          .href,
+        description: 'Слеби.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: true,
+      },
+      {
+        id: 'granite-slabs-2',
+        title: 'Слеби з граніту',
+        image: new URL('../img/products/stone/granite-slabs-2.jpg', import.meta.url)
+          .href,
+        description: 'Слеби.',
+        characteristics: {
+          origin: 'Україна',
+          color: 'Світло-сірий із чорними вкрапленнями',
+          thickness: '20-50 мм',
+          format: 'Квадратний',
+          price: 'від 1200 грн/м²',
+        },
+        hit: true,
       },
     ],
   },
@@ -557,74 +632,6 @@ export const stoneTypes = {
           price: 'від 1200 грн/м²',
         },
         hit: false,
-      },
-    ],
-  },
-  slabs: {
-    id: 'slabs',
-    title: 'Слеби',
-    image: new URL('../img/products/stone/slabs.jpg', import.meta.url).href,
-    description: 'Слеби.',
-    items: [
-      {
-        id: 'slabs-1',
-        title: 'Слеби 1',
-        image: new URL('../img/products/stone/slabs-1.jpg', import.meta.url)
-          .href,
-        description: 'Слеби.',
-        characteristics: {
-          origin: 'Україна',
-          color: 'Світло-сірий із чорними вкрапленнями',
-          thickness: '20-50 мм',
-          format: 'Квадратний',
-          price: 'від 1200 грн/м²',
-        },
-        hit: true,
-      },
-      {
-        id: 'slabs-2',
-        title: 'Слеби 2',
-        image: new URL('../img/products/stone/slabs-2.jpg', import.meta.url)
-          .href,
-        description: 'Слеби.',
-        characteristics: {
-          origin: 'Україна',
-          color: 'Світло-сірий із чорними вкрапленнями',
-          thickness: '20-50 мм',
-          format: 'Квадратний',
-          price: 'від 1200 грн/м²',
-        },
-        hit: true,
-      },
-      {
-        id: 'slabs-3',
-        title: 'Слеби 3',
-        image: new URL('../img/products/stone/slabs-3.jpg', import.meta.url)
-          .href,
-        description: 'Слеби.',
-        characteristics: {
-          origin: 'Україна',
-          color: 'Світло-сірий із чорними вкрапленнями',
-          thickness: '20-50 мм',
-          format: 'Квадратний',
-          price: 'від 1200 грн/м²',
-        },
-        hit: true,
-      },
-      {
-        id: 'slabs-4',
-        title: 'Слеби 4',
-        image: new URL('../img/products/stone/slabs-4.jpg', import.meta.url)
-          .href,
-        description: 'Слеби.',
-        characteristics: {
-          origin: 'Україна',
-          color: 'Світло-сірий із чорними вкрапленнями',
-          thickness: '20-50 мм',
-          format: 'Квадратний',
-          price: 'від 1200 грн/м²',
-        },
-        hit: true,
       },
     ],
   },
