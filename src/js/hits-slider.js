@@ -1,7 +1,5 @@
-import { StoneCatalog } from './stone-catalog.js';
-
-// Створюємо екземпляр каталогу каменю для отримання хітів продажів
-const stoneCatalog = new StoneCatalog();
+import { getHitProducts } from './loader-stones.js';
+import { createSlider } from './slider-utils.js';
 
 function renderHitCards(hits) {
   const track = document.querySelector('.hits-track');
@@ -28,57 +26,23 @@ function renderHitCards(hits) {
 }
 
 function initSlider() {
-  const track = document.querySelector('.hits-track');
-  const prevButton = document.querySelector('.prev-slide');
-  const nextButton = document.querySelector('.next-slide');
-  if (!track || !prevButton || !nextButton) return;
-
-  let currentSlide = 0;
-  let slidesToShow = 4;
-
-  function updateSlidesToShow() {
-    if (window.innerWidth <= 767) {
-      slidesToShow = 1;
-    } else if (window.innerWidth <= 991) {
-      slidesToShow = 2;
-    } else if (window.innerWidth <= 1199) {
-      slidesToShow = 3;
-    } else {
-      slidesToShow = 4;
-    }
-  }
-
-  function updateSliderPosition() {
-    const slideWidth = track.querySelector('.hit-card').offsetWidth + 24; // 24px - margin
-    track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
-  }
-
-  prevButton.addEventListener('click', () => {
-    if (currentSlide > 0) {
-      currentSlide--;
-      updateSliderPosition();
-    }
+  createSlider({
+    trackSelector: '.hits-track',
+    prevButtonSelector: '.prev-slide',
+    nextButtonSelector: '.next-slide',
+    defaultSlidesToShow: 4,
+    breakpoints: {
+      767: 1,
+      991: 2,
+      1199: 3
+    },
+    slideGap: 24,
+    slideSelector: '.hit-card'
   });
-
-  nextButton.addEventListener('click', () => {
-    const totalSlides = track.children.length;
-    if (currentSlide < totalSlides - slidesToShow) {
-      currentSlide++;
-      updateSliderPosition();
-    }
-  });
-
-  window.addEventListener('resize', () => {
-    updateSlidesToShow();
-    currentSlide = 0;
-    updateSliderPosition();
-  });
-
-  updateSlidesToShow();
 }
 
 export function initHits() {
-  const hits = stoneCatalog.getHitProducts();
+  const hits = getHitProducts();
   
   if (hits.length > 0) {
     renderHitCards(hits);

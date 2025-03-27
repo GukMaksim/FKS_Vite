@@ -1,0 +1,85 @@
+/**
+ * Оптимізовані стилі для покращення продуктивності
+ */
+
+/* Оптимізація завантаження зображень */
+img[loading="lazy"] {
+  transition: opacity 0.3s;
+}
+
+img[loading="lazy"]:not([src]) {
+  opacity: 0;
+}
+
+/* Оптимізація анімацій */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Оптимізація для мобільних пристроїв */
+@media (max-width: 767px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+  
+  /* Зменшення розміру шрифтів на мобільних пристроях */
+  h1 {
+    font-size: 1.8rem !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  h3 {
+    font-size: 1.2rem !important;
+  }
+  
+  /* Оптимізація відступів */
+  .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
+
+/* Оптимізація для друку */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  
+  body {
+    font-size: 12pt;
+    color: #000;
+    background: #fff;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Оптимізація для високої щільності пікселів */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .logo img {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* Оптимізація для режиму економії енергії */
+@media (prefers-color-scheme: dark) {
+  .dark-mode-support {
+    background-color: #121212;
+    color: #f5f5f5;
+  }
+}

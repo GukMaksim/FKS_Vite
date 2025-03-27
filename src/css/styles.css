@@ -28,3 +28,11 @@
 @import url('./scrollbar.css');
 @import url('./animations.css');
 @import url('./form-notification.css');
+@import url('./optimize.css'); /* Оптимізовані стилі для покращення продуктивності */
+
+/* Оптимізовані медіа-запити для всього сайту */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

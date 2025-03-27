@@ -6,6 +6,9 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
+// Імпортуємо спільні утиліти для слайдерів
+import { createSlider } from './slider-utils.js';
+
 export function initHeroSlider() {
   const heroSlider = new Swiper('.hero-slider', {
     modules: [Navigation, Pagination, Autoplay, EffectFade],

@@ -4,6 +4,7 @@ import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 import SortCss from 'postcss-sort-media-queries';
 import imagemin from 'vite-plugin-imagemin';
+import { resolve } from 'path';
 
 export default defineConfig(({ command }) => {
   return {
@@ -20,12 +21,18 @@ export default defineConfig(({ command }) => {
             if (id.includes('node_modules')) {
               return 'vendor';
             }
+            if (id.includes('catalog-utils') || id.includes('catalog-renderer') || id.includes('catalog-loader')) {
+              return 'catalog-utils';
+            }
+            if (id.includes('slider-utils') || id.includes('hero-slider') || id.includes('hits-slider')) {
+              return 'sliders';
+            }
           },
           entryFileNames: chunkInfo => {
             if (chunkInfo.name === 'commonHelpers') {
               return 'commonHelpers.js';
             }
-            return '[name].js';
+            return '[name]-[hash].js';
           },
           assetFileNames: assetInfo => {
             if (assetInfo.name && assetInfo.name.endsWith('.html')) {

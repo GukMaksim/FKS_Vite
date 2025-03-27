@@ -1,7 +1,7 @@
 import { stoneTypes } from './data-stones.js';
 import { getUrlParams, isCurrentPage, isHomePage } from './catalog-utils.js';
 import { renderCatalog, renderMainPageCatalog } from './catalog-renderer.js';
-import { updateMetaTags } from './meta-tags.js';
+import { updateCatalogMetaTags, getCatalogHits } from './catalog-loader.js';
 
 function renderStoneCatalog(type = null, item = null) {
   updateStoneMetaTags(type, item);
@@ -107,53 +107,30 @@ function renderMainPageStoneCatalog() {
 }
 
 function updateStoneMetaTags(type, item) {
-  const baseUrl = window.location.origin + window.location.pathname;
+  updateCatalogMetaTags(stoneTypes, type, item, {
+    baseTitle: 'Каталог каменю - ФКС',
+    baseDescription: 'Каталог природного каменю від ТОВ «ФКС» - граніт, мармур, онікс, травертин та інші види каменю',
+    baseKeywords: 'природний камінь, ФКС, каталог каменю',
+    itemTitleTemplate: '{itemTitle} - Каталог каменю - ФКС',
+    categoryTitleTemplate: '{categoryTitle} - Каталог каменю - ФКС',
+    catalogTitleTemplate: '{baseTitle}',
+    itemDescriptionTemplate: '{itemTitle} - {itemDescription} Замовляйте {categoryTitle} від ФКС.',
+    categoryDescriptionTemplate: 'Каталог {categoryTitle} від ФКС. {categoryDescription}',
+    catalogDescriptionTemplate: 'Каталог природного каменю від ТОВ «ФКС» - граніт, мармур, онікс, травертин та інші види каменю',
+    itemKeywordsTemplate: '{itemTitle}, {categoryTitle}, {baseKeywords}, {itemColor}',
+    categoryKeywordsTemplate: '{categoryTitle}, {baseKeywords}',
+    catalogKeywordsTemplate: 'каталог каменю, природний камінь, граніт, мармур, онікс, травертин, кварцит, піщаник',
+    typeParam: 'type',
+    itemParam: 'item'
+  });
+}
 
-  if (type && item && stoneTypes[type]) {
-    const stoneType = stoneTypes[type];
-    const stoneItem = stoneType.items.find(i => i.id === item);
-
-    if (stoneItem) {
-      updateMetaTags({
-        title: `${stoneItem.title} - Каталог каменю - ФКС`,
-        description: `${stoneItem.title} - ${stoneItem.description.substring(
-          0,
-          150
-        )}... Замовляйте ${stoneType.title.toLowerCase()} від ФКС.`,
-        keywords: `${stoneItem.title}, ${
-          stoneType.title
-        }, природний камінь, ФКС, ${stoneItem.characteristics?.color || ''}`,
-        ogTitle: `${stoneItem.title} - ФКС`,
-        ogDescription: stoneItem.description.substring(0, 200),
-        ogImage: stoneItem.image,
-        ogUrl: `${baseUrl}?type=${type}&item=${item}`,
-      });
-    }
-  } else if (type && stoneTypes[type]) {
-    const stoneType = stoneTypes[type];
-    updateMetaTags({
-      title: `${stoneType.title} - Каталог каменю - ФКС`,
-      description: `Каталог ${stoneType.title.toLowerCase()} від ФКС. ${stoneType.description.substring(
-        0,
-        150
-      )}...`,
-      keywords: `${stoneType.title}, природний камінь, ФКС, каталог каменю`,
-      ogTitle: `${stoneType.title} - ФКС`,
-      ogDescription: stoneType.description.substring(0, 200),
-      ogImage: stoneType.image,
-      ogUrl: `${baseUrl}?type=${type}`,
-    });
-  } else {
-    updateMetaTags({
-      title: `Каталог каменю - ФКС`,
-      description: `Каталог природного каменю від ТОВ «ФКС» - граніт, мармур, онікс, травертин та інші види каменю`,
-      keywords: `каталог каменю, природний камінь, граніт, мармур, онікс, травертин, кварцит, піщаник`,
-      ogTitle: `Каталог каменю - ФКС`,
-      ogDescription: `Широкий вибір природного каменю найвищої якості: граніт, мармур, онікс, травертин та інші види каменю для вашого інтер'єру та екстер'єру.`,
-      ogImage: `${window.location.origin}/img/logo.png`,
-      ogUrl: baseUrl,
-    });
-  }
+/**
+ * Отримує хіти продажів з каталогу каменю
+ * @returns {Array} Масив хітів продажів
+ */
+export function getHitProducts() {
+  return getCatalogHits(stoneTypes, item => item.hit);
 }
 
 export function initStones() {

@@ -1,7 +1,7 @@
 import { productCategories } from './data-products.js';
 import { getUrlParams, isCurrentPage, isHomePage } from './catalog-utils.js';
 import { renderCatalog, renderMainPageCatalog } from './catalog-renderer.js';
-import { updateMetaTags } from './meta-tags.js';
+import { updateCatalogMetaTags, getCatalogHits } from './catalog-loader.js';
 import { initProductLightbox } from './product-lightbox.js';
 
 function renderProductCatalog(category = null, item = null) {
@@ -126,55 +126,22 @@ function renderProductCatalog(category = null, item = null) {
 }
 
 function updateProductMetaTags(category, item) {
-  const baseUrl = window.location.origin + window.location.pathname;
-
-  if (category && item && productCategories[category]) {
-    const productCategory = productCategories[category];
-    const productItem = productCategory.items.find(i => i.id === item);
-
-    if (productItem) {
-      updateMetaTags({
-        title: `${productItem.title} - Вироби з каменю - ФКС`,
-        description: `${
-          productItem.title
-        } - ${productItem.description.substring(
-          0,
-          150
-        )}... Замовляйте ${productCategory.title.toLowerCase()} від ФКС.`,
-        keywords: `${productItem.title}, ${productCategory.title}, вироби з каменю, ФКС, природний камінь`,
-        ogTitle: `${productItem.title} - ФКС`,
-        ogDescription: productItem.description.substring(0, 200),
-        ogImage: productItem.image,
-        ogUrl: `${baseUrl}?category=${category}&item=${item}`,
-      });
-    }
-  } else if (category && productCategories[category]) {
-    const productCategory = productCategories[category];
-    updateMetaTags({
-      title: `${productCategory.title} - Вироби з каменю - ФКС`,
-      description: `${
-        productCategory.title
-      } від ФКС - ${productCategory.description.substring(
-        0,
-        150
-      )}... Замовляйте вироби з природного каменю.`,
-      keywords: `${productCategory.title}, вироби з каменю, ФКС, природний камінь`,
-      ogTitle: `${productCategory.title} - ФКС`,
-      ogDescription: productCategory.description.substring(0, 200),
-      ogImage: productCategory.image,
-      ogUrl: `${baseUrl}?category=${category}`,
-    });
-  } else {
-    updateMetaTags({
-      title: `Вироби з каменю - ФКС`,
-      description: `Каталог виробів з природного каменю від ТОВ «ФКС» - стільниці, підвіконня, сходи, каміни та інші вироби`,
-      keywords: `вироби з каменю, стільниці, підвіконня, сходи, каміни, підлоги, вироби з природного каменю`,
-      ogTitle: `Вироби з каменю - ФКС`,
-      ogDescription: `Широкий асортимент виробів з натурального каменю найвищої якості для вашого інтер'єру та екстер'єру.`,
-      ogImage: `${window.location.origin}/img/logo.png`,
-      ogUrl: baseUrl,
-    });
-  }
+  updateCatalogMetaTags(productCategories, category, item, {
+    baseTitle: 'Вироби з каменю - ФКС',
+    baseDescription: 'Каталог виробів з природного каменю від ТОВ «ФКС» - стільниці, підвіконня, сходи, каміни та інші вироби',
+    baseKeywords: 'вироби з каменю, ФКС, природний камінь',
+    itemTitleTemplate: '{itemTitle} - Вироби з каменю - ФКС',
+    categoryTitleTemplate: '{categoryTitle} - Вироби з каменю - ФКС',
+    catalogTitleTemplate: '{baseTitle}',
+    itemDescriptionTemplate: '{itemTitle} - {itemDescription} Замовляйте {categoryTitle} від ФКС.',
+    categoryDescriptionTemplate: '{categoryTitle} від ФКС - {categoryDescription} Замовляйте вироби з природного каменю.',
+    catalogDescriptionTemplate: 'Каталог виробів з природного каменю від ТОВ «ФКС» - стільниці, підвіконня, сходи, каміни та інші вироби',
+    itemKeywordsTemplate: '{itemTitle}, {categoryTitle}, вироби з каменю, ФКС, природний камінь',
+    categoryKeywordsTemplate: '{categoryTitle}, вироби з каменю, ФКС, природний камінь',
+    catalogKeywordsTemplate: 'вироби з каменю, стільниці, підвіконня, сходи, каміни, підлоги, вироби з природного каменю',
+    typeParam: 'category',
+    itemParam: 'item'
+  });
 }
 
 export function initProducts() {
