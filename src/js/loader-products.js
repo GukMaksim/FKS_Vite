@@ -14,9 +14,7 @@ function renderProductCatalog(category = null, item = null) {
                 <div class="product-category-info">
                     <div class="product-main-content">
                         <div class="product-item-image-big">
-                            <img src="${productItem.image}" alt="${
-      productItem.title
-    }" loading="lazy">
+                            <img src="${productItem.image}" alt="${productItem.title}" loading="lazy">
                         </div>
                         <div class="product-description-container">
                             <p class="product-category-description">${productItem.description}</p>
@@ -24,6 +22,10 @@ function renderProductCatalog(category = null, item = null) {
                             <p class="product-category-description">${productItem.description3}</p>
                         </div>
                     </div>
+                    <div class="product-order-button-container">
+                        <button class="btn btn-primary btn-calc pulse">ЗАМОВИТИ ПРОРАХУНОК</button>
+                    </div>
+                    
                     ${
                       productItem.pics
                         ? `
@@ -91,6 +93,9 @@ function renderProductCatalog(category = null, item = null) {
                       .join('')}
                 </div>
             </div>
+            <div class="product-order-button-container">
+                        <button class="btn btn-primary btn-calc pulse">ЗАМОВИТИ ПРОРАХУНОК</button>
+                    </div>
         `,
     renderAllCategories: productCategories => `
             <h1 class="section-title">Вироби з каменю</h1>

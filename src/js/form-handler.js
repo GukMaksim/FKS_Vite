@@ -69,7 +69,7 @@ function initForm(form, formType) {
       });
       
       if (response.ok) {
-        fetch('https://formsubmit.co/confirm/bcf45db3be53c06d24bc765c9cf47365');
+        fetch('https://formsubmit.co/confirm/b4ad7bf2998d51f1f79ae45df30baa50');
         // Показуємо повідомлення про успіх
         showNotification(form, 'Дякуємо! Ваше повідомлення відправлено.', 'success');
         form.reset();

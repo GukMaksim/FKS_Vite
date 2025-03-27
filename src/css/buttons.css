@@ -47,6 +47,11 @@
   letter-spacing: 0.5px;
 }
 
+.btn-calc {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
 .btn-pulse {
   box-shadow: 0 4px 16px rgba(193, 154, 107, 0.4);
   position: relative;

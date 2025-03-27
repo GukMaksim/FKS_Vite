@@ -89,6 +89,15 @@
     z-index: 10000;
 }
 
+/* Стилі для контейнера кнопки замовлення */
+.product-order-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    width: 100%;
+}
+
 @media (max-width: 768px) {
     .product-main-content {
         flex-direction: column;
