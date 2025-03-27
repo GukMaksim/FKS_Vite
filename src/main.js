@@ -8,6 +8,7 @@ import { initSearch } from './js/search.js';
 import { initHits } from './js/hits-slider.js';
 import { initPhoneMasks } from './js/input-mask.js';
 import { setBaseOpenGraphTags } from './js/meta-tags.js';
+import { initFormHandlers } from './js/form-handler.js';
 import './js/animations.js';
 import './css/breadcrumbs.css';
 
@@ -22,4 +23,5 @@ document.addEventListener('DOMContentLoaded', () => {
   generateBreadcrumbs();
   initHeroSlider();
   initPhoneMasks();
+  initFormHandlers();
 });

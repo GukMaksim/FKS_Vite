@@ -7,24 +7,24 @@
 /* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
-@import url('./animations.css');
-@import url('./scrollbar.css');
-
-/* Sections style */
+@import url('./buttons.css');
 @import url('./header.css');
 @import url('./hero.css');
-@import url('./products.css');
-@import url('./contacts.css');
-@import url('./footer.css');
 @import url('./stone-catalog.css');
-@import url('./product-categories.css');
-@import url('./product-gallery.css');
-@import url('./product-details.css');
-@import url('./portfolio.css');
-@import url('./lightbox.css');
-@import url('./about.css');
-@import url('./search.css');
-@import url('./buttons.css');
-@import url('./hits.css');
+@import url('./products.css');
 @import url('./consultation.css');
+@import url('./hits.css');
 @import url('./stages.css');
+@import url('./footer.css');
+@import url('./about.css');
+@import url('./contacts.css');
+@import url('./portfolio.css');
+@import url('./product-categories.css');
+@import url('./product-details.css');
+@import url('./product-gallery.css');
+@import url('./lightbox.css');
+@import url('./back-link.css');
+@import url('./search.css');
+@import url('./scrollbar.css');
+@import url('./animations.css');
+@import url('./form-notification.css');
