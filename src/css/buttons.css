@@ -50,6 +50,7 @@
 .btn-calc {
   text-decoration: underline;
   font-weight: 600;
+  font-size: large;
 }
 
 .btn-pulse {
@@ -88,5 +89,8 @@
   .btn {
     padding: 8px 16px;
     font-size: 14px;
+  }
+  .btn-calc {
+    font-size: large;
   }
 }
