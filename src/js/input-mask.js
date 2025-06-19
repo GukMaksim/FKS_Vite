@@ -11,5 +11,4 @@ export function initPhoneMasks() {
     });
   });
 
-  console.log('Phone input masks initialized');
 }

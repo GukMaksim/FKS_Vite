@@ -13,7 +13,7 @@ export function renderCatalog(data, type, item, options = {}) {
     if (categoryItem) {
       content = options.renderItemDetails?.(categoryItem, category, type) || '';
     } else {
-      content = `<p>Елемент не знайдено</p><a href="${options.backUrl}?type=${type}" class="back-link">Повернутися до ${category.title}</a>`;
+      content = `<p>Елемент не знайдено</p><a href="${options.backUrl}?type=${type}" class="back-link"><< Повернутися до ${category.title}</a>`;
     }
   } else if (type && data[type]) {
     const category = data[type];

@@ -25,7 +25,7 @@ function renderProductCatalog(category = null, item = null) {
                     <div class="product-order-button-container">
                         <button class="btn btn-primary btn-calc pulse">ЗАМОВИТИ ПРОРАХУНОК</button>
                     </div>
-                    
+
                     ${
                       productItem.pics
                         ? `
@@ -52,10 +52,11 @@ function renderProductCatalog(category = null, item = null) {
                     }
                 </div>
             </div>
-            <a href="./products.html?category=${category}" class="btn btn-primary">Повернутися до ${
+            <a href="./products.html?category=${category}" class="btn btn-primary"> << Повернутися до ${
+
       productCategory.title
     }</a>
-            
+
             <!-- Product Lightbox -->
             <div id="product-lightbox" class="product-lightbox">
                 <span class="lightbox-close">&times;</span>

@@ -49,11 +49,6 @@
   transition: transform var(--transition);
 }
 
-.products-link:hover .products-img,
-.products-link:focus .products-img {
-  transform: scale(1.05);
-}
-
 .products-content {
   padding: 24px;
   background-color: #ffffff;

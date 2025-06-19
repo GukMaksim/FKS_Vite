@@ -18,7 +18,8 @@ function renderStoneCatalog(type = null, item = null) {
                     }</p>
                     ${
                       stoneItem.characteristics
-                        ? `
+                        ? /* html */
+                        `
                         <div class="stone-characteristics">
                             <h4>Характеристики:</h4>
                             <ul class="characteristics-list">
@@ -34,7 +35,7 @@ function renderStoneCatalog(type = null, item = null) {
                     }
                 </div>
             </div>
-            <a href="./stones.html?type=${type}" class="btn btn-primary">Повернутися до ${
+            <a href="./stones.html?type=${type}" class="btn btn-primary"><< Повернутися до ${
       stoneType.title
     }</a>
         `,

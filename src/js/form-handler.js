@@ -16,7 +16,6 @@ export function initFormHandlers() {
     initForm(consultationForm, 'consultation');
   }
 
-  console.log('Form handlers initialized');
 }
 
 // Функція для ініціалізації конкретної форми
